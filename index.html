@@ -1,1 +1,36 @@
-<h1>Build Shit in CSS</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Shit in CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Build Shit in CSS</h1>
+    <ol class="problems">
+        <li data-slug="intro">Introduction</li>
+        <li data-slug="display">Blocks, Inlines, and Display</li>
+    </ol>
+</div>
+
+<figure class="problem" id="problem"></figure>
+
+<script type="text/template" id="template">
+    <div class="iframe-wrapper">
+        <a href="<%= src %>" target="_blank"></a>
+        <iframe src="<%= src %>"></iframe>
+    </div>
+    <figcaption>
+        <%= docs %>
+    </figcaption>
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.3.0/showdown.min.js"></script>
+<script src="underscore-min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
