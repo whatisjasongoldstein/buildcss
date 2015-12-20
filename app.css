@@ -21,6 +21,12 @@ pre {
     border-radius: 4px;
 }
 
+a, a:visited {
+    color: navy;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 128, 0.33);
+}
+
 blockquote {
     margin: 0;
     border-left: 1px solid #000;
@@ -75,16 +81,17 @@ blockquote {
     list-style-type: none;
 }
 
-.problems [data-slug] {
-    cursor: pointer;
-    color: navy;
-    text-decoration: underline;
-    margin: 10px;
+.problems li {
+    margin: 10px 0;
 }
 
 .problem {
     box-sizing: border-box;
     margin: 0 0 0 240px;
     padding: 40px 0;
+}
+
+.problem figcaption {
+    max-width: 700px;
 }
 

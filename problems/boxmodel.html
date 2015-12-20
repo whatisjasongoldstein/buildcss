@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Model</title>
+</head>
+<style type="text/css">
+    .one, .two {
+        margin: 20px;
+        border: 2px solid black;
+        padding: 20px;
+        width: 300px;
+    }
+
+    .one {
+        background: orange;
+    }
+
+    .two {
+        background: tan;
+        box-sizing: border-box;
+    }
+</style>
+<body>
+
+<div class="one">
+    This box is 300px wide, plus border and padding.
+</div>
+
+<div class="two">
+    This box is 300px wide, including-border and padding.
+</div>
+
+</body>
+</html>
