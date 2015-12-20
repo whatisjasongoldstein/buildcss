@@ -81,6 +81,11 @@ blockquote {
     list-style-type: none;
 }
 
+.sidebar footer {
+    font-size: 0.75rem;
+    margin: 1rem;
+}
+
 .problems {
     padding: 0 10px 0 30px;
 }
