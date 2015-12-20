@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Psuedoelements</title>
+    <style type="text/css">
+        .close:before {
+            content: "x";
+            margin-right: 6px;
+            color: #F00;
+            position: relative;
+            bottom: 1px;
+        }
+
+        .footnote:after {
+            content: "*";
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+
+<button class="close">Close</button>
+<p class="footnote">Read the fine print.</p>
+
+</body>
+</html>
