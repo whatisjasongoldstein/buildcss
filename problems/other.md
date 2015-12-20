@@ -1,9 +1,9 @@
-# And I'm done here
+# I'm done here, but you're just getting started
 
-Of course, you're just getting started. The best way to learn how to build shit in CSS
-is to go forth and build lot's of shit.
+The best way to learn how to build shit in CSS 
+is to go forth and build websites.
 
-But if you're looking for more resources, I like these:
+But if you're looking for more resources, here's some good stuff:
 
 1. [Froggy Flexbox](http://flexboxfroggy.com/). Flexbox is in its infancy, and pretty counterintuitive,
 but it's (probably) the future of layout. 
