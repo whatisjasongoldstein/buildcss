@@ -3,56 +3,14 @@ var app = {};
 app.template = _.template(document.getElementById("template").innerHTML);
 app.markdown = new showdown.Converter();
 
-// Cookies have the worst js api ever
-app.cookies = function() {
-
-    function get(key) {
-        var match = _.filter(document.cookie.split(";"), function(k, v, collection) {
-            return k.split("=")[0].trim() === key;
-        })[0];
-        if (match) {
-            return match.split("=")[1];
-        }
-        return undefined;
-    }
-    
-    function set(key, value, timeout) {
-        var expires = "";
-        if (timeout) {
-            var date = new Date();
-            date.setTime(date.getTime() + timeout);
-            expires = "; expires=" + date.toGMTString();
-        }
-        document.cookie = key + "=" + value + expires + "; path=/";
-        return value;
-    }
-
-    function remove(key) {
-        return set(key, "", -1);
-    }
-
-    return {
-        "get": get,
-        "set": set,
-        "remove": remove
-    };
-}();
-
-// State is kept in a cookie, which needs
-// updating, and defaults to the intro.
-Object.defineProperty(app, "state", {
-    get: function() {
-        return app._state || app.cookies.get("state") || "intro";
-    },
-    set: function(slug) {
-        app.cookies.set("state", slug);
-        app._state = slug;
-    }
-});
-
-
+/**
+ * Renders the page with a problem and tips.
+ * You know, in any other project, I'd say this is dumb,
+ * why not just have normal pages that link to each other.
+ * But this is intended to be served as flat files with
+ * no build process, so ¯\_(ツ)_/¯
+ */
 app.render = function(slug) {
-    app.state = slug;
     var context = {
         src: "problems/" + slug + ".html",
     };
@@ -90,8 +48,8 @@ app.getEventPath = function(e, matching) {
     return path;
 };
 
-// Onload, render the default state.
-app.render(app.state);
+// Onload, render some content
+app.render(window.location.search.split("?")[1] || "intro");
 
 // Event Listeners
 document.addEventListener("click", function(e) {

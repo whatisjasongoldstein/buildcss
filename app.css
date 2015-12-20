@@ -10,9 +10,12 @@ body {
     position: relative;
 }
 
-pre {
+pre, code {
     font-family: 'Inconsolata', monospace;
-    background: #eee;
+    background: #eee;    
+}
+
+pre {
     padding: 5px 10px;
     max-width: 40rem;
     border-radius: 4px;
@@ -62,7 +65,7 @@ blockquote {
 .sidebar {
     width: 200px;
     box-sizing: border-box;
-    position: absolute;
+    position: fixed;
     height: 100%;
     left: 0;
     margin: 0;
