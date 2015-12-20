@@ -81,6 +81,10 @@ blockquote {
     list-style-type: none;
 }
 
+.problems {
+    padding: 0 10px 0 30px;
+}
+
 .problems li {
     margin: 10px 0;
 }

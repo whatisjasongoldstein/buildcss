@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Centering and radius</title>
+    <style>
+        .container {
+            background: #eee;
+            height: 300px;
+            margin: 20px;
+            position: relative;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background: red;
+            text-align: center;
+            line-height: 100px;
+            font-family: helvetica, arial, sans-serif;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="ball">Coffee?</div>
+</div>
+
+</body>
+</html>
