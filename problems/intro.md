@@ -24,4 +24,4 @@ Each problem is an example of something made with html in CSS. Your job is to re
     .b {color: blue;}
 
 **Need a place to write code?** You should get used to working with plain html files on your desktop.
-But you can also 
+But you can also work in [CodePen](https://codepen.io) or [JSFiddle](https://jsfiddle.net/).
