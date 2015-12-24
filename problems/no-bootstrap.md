@@ -20,6 +20,10 @@ you don't know how to draw a button.
 
 Buttons are easy.
 
+### For Extra Points
+
+I didn't do any hover effects. You could if you want to show off.
+
 #### Now, tell us what do you really think?
 
 I use Bootstrap's tooltip in production because it's nice and it works. I may even borrow 
