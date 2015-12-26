@@ -31,5 +31,5 @@ a few idea from their form code some day - they're good at forms.
 
 Their responsive stuff, however, is a tragic mess.
 
-But your a professional developer. You shouldn't listen to me. You've got an Inspect Element
+But you're a professional developer. You shouldn't listen to me. You've got an Inspect Element
 and a Github, you can read the code of any front-end library and evaluate it for your purposes.
