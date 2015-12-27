@@ -1,6 +1,6 @@
 # The Baseline (Vertical Align, Line Height, etc.)
 
-In typography, the is a line the letter sit on. If you've never heard this term,
+In typography, the baseline is a line the letter sit on. If you've never heard this term,
 read the [Wikipedia entry](https://en.wikipedia.org/wiki/Baseline_\(typography\))
 quickly.
 
