@@ -1,6 +1,6 @@
 # Bear Awareness (in Grid Form)
 
-A comment way to lay out a list of visual things is a grid like above.
+A common way to lay out a list of visual things is a grid like above.
 
 This one may be difficult. Especially since you have to use this markup:
 
