@@ -7,7 +7,7 @@ But `margin: auto auto` has no extra effect, because the automatic top/bottom ma
 Why? Is the W3C on drugs? Well, maybe. The bigger issue is CSS was originally designed
 for relatively simple documents, and we keep pushing its limits.
 
-There's a few curve-balls here:
+There are a few curve-balls here:
 
 ## Vertical Centering Notes
 * Once upon a time, this was pretty much impossible. However, the new property `transform` gives us a way
