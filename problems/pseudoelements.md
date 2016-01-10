@@ -1,7 +1,7 @@
 # Pseudoelements
 
-Pseudoelements are things add before or after an element that can be styled,
-but aren't part of the markup and can't be touched by javascript. They're useful for
+Pseudoelements are things you add before or after an element that can be styled,
+but aren't part of the markup and can't be touched by Javascript. They're useful for
 icons and symbols, or adding an extra clearing element.
 
 Here's how you write them.
