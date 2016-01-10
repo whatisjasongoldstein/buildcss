@@ -11,7 +11,7 @@
 * `position: absolute;` makes `top`/`left`/`bottom`/`right` set the exact
 number of pixels an element will appear relative to its innermost container that *also*
 has a postiion set.
-    * So putting an absolutely position element inside a relative or absolute positioned
+    * So putting an absolutely positioned element inside a relative or absolute positioned
     element would work like you expect. But if you don't set the position on the parent
     (the default position is `static`) it would be ignored, and the position will be set based
     on the next container up the DOM that does have a position (or the whole page).
