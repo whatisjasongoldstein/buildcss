@@ -24,7 +24,7 @@ Buttons are easy.
 
 I didn't do any hover effects. You could if you want to show off.
 
-#### Now, tell us what do you really think?
+#### Now tell us, what do you really think?
 
 I use Bootstrap's tooltip in production because it's nice and it works. I may even borrow 
 a few idea from their form code some day - they're good at forms.
