@@ -1,4 +1,4 @@
-# Veritcally Centering Things
+# Vertically Centering Things
 ## The Second Hardest CSS Problem
 
 `margin:0 auto` will center a block horizontally, because auto means equal space on each side.
