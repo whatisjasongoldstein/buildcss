@@ -1,0 +1,16 @@
+# Background Image
+
+Take a look at the MDN page for [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image), and use this picture of a Husky: [`http://whatisjasongoldstein.github.io/buildcss/img/husky.jpg`](http://whatisjasongoldstein.github.io/buildcss/img/husky.jpg).
+
+The image is square, but the boxes we're using it as a background on are not. (You can tell this where the orange `background-color` shows through.)
+
+Going left to right, do this:
+
+1. The image should `cover` the box (hint: `background-size: cover`) and be positioned so the tops align.
+2. The image should be contained entirely within the box and centered horizontally. (`background-size:contain`).
+    * Did the image start tiling when there's extra space? Try playing with `background-repeat`.
+3. The image should be 50% of the box's height and centered (hint: look at `background-position`).
+4. Cover the box again, but this time, center the image so you can see the Husky's nose.
+5. Tile a stripe of the image (`background-repeat`), positioned 10px from the top. Make sure never to cut the image, it shouldn't be cut off at the box.
+    * Try setting `background-size` to a percentage to make that happen.
+6. Use `background-size` and `background-position` to zoom in.
