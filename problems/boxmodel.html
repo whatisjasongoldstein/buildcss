@@ -4,7 +4,7 @@
     <title>Box Model</title>
 </head>
 <style type="text/css">
-    .one, .two {
+    .one, .two, .three {
         margin: 20px;
         border: 2px solid black;
         padding: 20px;
@@ -19,6 +19,11 @@
         background: tan;
         box-sizing: border-box;
     }
+
+    .three {
+        background: lightblue;
+        margin: 40px;
+    }
 </style>
 <body>
 
@@ -28,6 +33,10 @@
 
 <div class="two">
     This box is 300px wide, including-border and padding.
+</div>
+
+<div class="three">
+    This box is also 300px wide, with twice as much margin.
 </div>
 
 </body>

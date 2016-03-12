@@ -4,4 +4,8 @@ MDN has a pretty good [intro to the box model](https://developer.mozilla.org/en-
 
 This one should be self explanatory.
 
-One note: read about [box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing), a CSS property that determines, well, exactly what you need.
+## Notes
+
+* Read about [box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing), a CSS property that determines, well, exactly what you need.
+* Notice that the margins "collapse" - when the box with `margin: 40px` is next to a box with `margin: 20px`, the two boxes render 20 pixels apart. This is because **margins don't add together** - they dictate the minimum space
+the element needs to be spaced from other stuff. 
