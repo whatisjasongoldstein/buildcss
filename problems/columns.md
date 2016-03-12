@@ -12,6 +12,8 @@ Columns are tricky. Try to build this.
 * To make the footer clear floats, it needs to be a block element with `clear:both`.
     * But by default, no matter how much `margin-top` you put on the footer, it won't create
     a gap between the footer and the columns.
+        * This is because floats are broken out of from the regular layout, so they **only respect margins from other floats**.
+        * The exception is margins coming from above. You can push a float down with a margin, but margins coming from the side or bottom will have no effect.
     * There are two ways to fix this:
         * Setting margin bottom on the columns.
         * We can fix this by putting a wrapping div around both elements, which can clear the floats
