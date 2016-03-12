@@ -14,3 +14,8 @@ Going left to right, do this:
 5. Tile a stripe of the image (`background-repeat`), positioned 10px from the top. Make sure never to cut the image, it shouldn't be cut off at the box.
     * Try setting `background-size` to a percentage to make that happen.
 6. Use `background-size` and `background-position` to zoom in.
+
+-----
+<small>
+**Special Thanks:** The giant fluffy creature shown above is Koda. Because we live in a ridiculous world, you can see more pictures of her on [Instagram](https://www.instagram.com/thatkoda/).
+</small>
