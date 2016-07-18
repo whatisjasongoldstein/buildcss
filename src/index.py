@@ -18,7 +18,7 @@ def pages():
         else:
             filename = "%s/index.html" % slug
         page = Page(template="problem.html", output=filename, context={
-            "iframe_src": "problems/%s.html" % slug,
+            "iframe_src": "/problems/%s.html" % slug,
             "text": "problems/%s.md" % slug,
         })
         iframe = Copy(infile="problems/%s.html" % slug)
