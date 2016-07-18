@@ -17,7 +17,7 @@ def pages():
             filename = "index.html"
         else:
             filename = "%s/index.html" % slug
-        page = Page(template="problem.html", output=filename, context={
+        page = Page(template="problem.html", outfile=filename, context={
             "iframe_src": "/problems/%s.html" % slug,
             "text": "problems/%s.md" % slug,
         })
@@ -34,5 +34,5 @@ def assets():
 
 @action
 def js():
-    return Concat(filenames=["underscore-min.js", "app.js"],
-        destination="app.min.js")
+    return Concat(infiles=["underscore-min.js", "app.js"],
+        outfile="app.min.js")
