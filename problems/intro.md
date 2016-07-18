@@ -20,8 +20,10 @@ Each problem is an example of something made with html in CSS. Your job is to re
 
 **Clicking the image above opens the finished html document.** You should view source, read it, open it in the *inspector*, and fiddle with it until you understand what's happening and why. This case is easy - you need two `<p>`'s and something like
     
-    .a {color: red;}
-    .b {color: blue;}
+```
+.a {color: red;}
+.b {color: blue;}
+```
 
 **Need a place to write code?** You should get used to working with plain html files on your desktop.
 But you can also work in [CodePen](https://codepen.io) or [JSFiddle](https://jsfiddle.net/).

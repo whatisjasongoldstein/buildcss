@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Shit in CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/buildcss/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+
+    
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Build Shit in CSS</h1>
+    <ol class="problems">
+        <li><a href="/buildcss/">Introduction</a></li>
+        <li><a href="/buildcss/display/">Blocks, Inlines, and Display</a></li>
+        <li><a href="/buildcss/selectors/">Selectors</a></li>
+        <li><a href="/buildcss/boxmodel/">Box Model</a></li>
+        <li><a href="/buildcss/floating/">Floating+Clearing I</a></li>
+        <li><a href="/buildcss/clearing-floats/">Floating+Clearing II</a></li>
+        <li><a href="/buildcss/centering/">Centering</a></li>
+        <li><a href="/buildcss/positioning/">Positioning</a></li>
+        <li><a href="/buildcss/vertical-centering/">Vertical Centering and Radius</a></li>
+        <li><a href="/buildcss/zindex/">Z-Index</a></li>
+        <li><a href="/buildcss/pseudoelements/">:before and :after</a></li>
+        <li><a href="/buildcss/columns/">Columns</a></li>
+        <li><a href="/buildcss/grids/">Image Grids</a></li>
+        <li><a href="/buildcss/no-bootstrap/">Say No To Bootstrap</a></li>
+        <li><a href="/buildcss/baseline/">The Baseline</a></li>
+        <li><a href="/buildcss/forms/">Forms</a></li>
+        <li><a href="/buildcss/tables/">Tables</a></li>
+        <li><a href="/buildcss/background-image/">Background Image</a></li>
+        <li><a href="/buildcss/transform/">More Transforms</a></li>
+        <li><a href="/buildcss/other/">Other Resources I like</a></li>
+    </ol>
+
+    <footer>Created by <a href="http://whatisjasongoldstein.com">Jason Goldstein</a>. Help improve this! Bring your ideas to <a href="https://github.com/whatisjasongoldstein/buildcss/issues">Github</a>.</footer>
+</div>
+
+<figure class="problem" id="problem">
+    <div class="iframe-wrapper">
+        <a href="/buildcss/problems/selectors.html" target="_blank"></a>
+        <iframe src="/buildcss/problems/selectors.html"></iframe>
+    </div>
+    <figcaption>
+<h1 id="advanced-selectors">Advanced Selectors</h1>
+<p>I assume you already know how to style stuff by its <code>id</code>, <code>class</code>, or <code>element</code>.</p>
+<h2 id="goals">Goals</h2>
+<ol>
+<li>Headlines (<code>&lt;h1&gt;</code>) followed by a subhead (<code>&lt;h2&gt;</code>) shouldn&rsquo;t have space between them.</li>
+<li>Subheads that follow a headline should have a red line (<code>border-bottom</code>) under them.<ul>
+<li>Subheads elsewhere should have normal margin and no bottom border</li>
+</ul>
+</li>
+<li>Italics <code>&lt;i&gt;</code> inside of h1 or h2 should be blue. But not elsewhere.</li>
+<li>In the list, even items should have a yellow background.</li>
+</ol>
+<h2 id="notes">Notes</h2>
+<ul>
+<li><code>.a + .b</code> is an adjacent selector. It matches elements with a class <code>b</code> that are right after elements with a class <code>.a</code>.</li>
+<li><code>nth-child</code> is pretty cool. You should <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%3Anth-child">read about it</a>.</li>
+</ul>        
+    </figcaption>
+</figure>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script src="/buildcss/app.min.js"></script>
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100908046); }catch(e){}</script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Shit in CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/buildcss/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+
+    
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Build Shit in CSS</h1>
+    <ol class="problems">
+        <li><a href="/buildcss/">Introduction</a></li>
+        <li><a href="/buildcss/display/">Blocks, Inlines, and Display</a></li>
+        <li><a href="/buildcss/selectors/">Selectors</a></li>
+        <li><a href="/buildcss/boxmodel/">Box Model</a></li>
+        <li><a href="/buildcss/floating/">Floating+Clearing I</a></li>
+        <li><a href="/buildcss/clearing-floats/">Floating+Clearing II</a></li>
+        <li><a href="/buildcss/centering/">Centering</a></li>
+        <li><a href="/buildcss/positioning/">Positioning</a></li>
+        <li><a href="/buildcss/vertical-centering/">Vertical Centering and Radius</a></li>
+        <li><a href="/buildcss/zindex/">Z-Index</a></li>
+        <li><a href="/buildcss/pseudoelements/">:before and :after</a></li>
+        <li><a href="/buildcss/columns/">Columns</a></li>
+        <li><a href="/buildcss/grids/">Image Grids</a></li>
+        <li><a href="/buildcss/no-bootstrap/">Say No To Bootstrap</a></li>
+        <li><a href="/buildcss/baseline/">The Baseline</a></li>
+        <li><a href="/buildcss/forms/">Forms</a></li>
+        <li><a href="/buildcss/tables/">Tables</a></li>
+        <li><a href="/buildcss/background-image/">Background Image</a></li>
+        <li><a href="/buildcss/transform/">More Transforms</a></li>
+        <li><a href="/buildcss/other/">Other Resources I like</a></li>
+    </ol>
+
+    <footer>Created by <a href="http://whatisjasongoldstein.com">Jason Goldstein</a>. Help improve this! Bring your ideas to <a href="https://github.com/whatisjasongoldstein/buildcss/issues">Github</a>.</footer>
+</div>
+
+<figure class="problem" id="problem">
+    <div class="iframe-wrapper">
+        <a href="/buildcss/problems/forms.html" target="_blank"></a>
+        <iframe src="/buildcss/problems/forms.html"></iframe>
+    </div>
+    <figcaption>
+<h1 id="forms">Forms</h1>
+<p>Styling forms is tricky but important. In a large project,
+you&rsquo;ll want to create some styles that you can reuse on all your forms
+so you don&rsquo;t have to style them indiviually.</p>
+<p>This form markup is similar to what a web framework - say, Django - would generate.</p>
+<pre><code>&lt;form action="." method="POST"&gt;    
+    &lt;p&gt;
+        &lt;label&gt;Name&lt;/label&gt;
+        &lt;input type="text"&gt;
+    &lt;/p&gt;
+
+    &lt;p class="required"&gt;
+        &lt;label&gt;Preferred Taco&lt;/label&gt;
+        &lt;select&gt;
+            &lt;option&gt;Carne&lt;/option&gt;
+            &lt;option&gt;Al Pastor&lt;/option&gt;
+            &lt;option&gt;Don't care, just add guac&lt;/option&gt;
+            &lt;option&gt;All of Them&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        &lt;label&gt;Spicy?&lt;/label&gt;
+        &lt;input type="checkbox"&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        &lt;label&gt;Address&lt;/label&gt;
+        &lt;textarea&gt;&lt;/textarea&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        &lt;input type="submit" value="Send Tacos!"&gt;   
+    &lt;/p&gt;
+&lt;/form&gt;
+</code></pre>
+<h3 id="hints">Hints</h3>
+<ul>
+<li>Use <code>:before</code> to make the astericks on required fields.</li>
+<li>Remember vertical-align when you can&rsquo;t figure out how to make textarea hang down.</li>
+<li>Setting the width on <code>label</code> is a good way to make everything line up.</li>
+</ul>        
+    </figcaption>
+</figure>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script src="/buildcss/app.min.js"></script>
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100908046); }catch(e){}</script>
+
+</body>
+</html>

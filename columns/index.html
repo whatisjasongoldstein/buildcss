@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Shit in CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/buildcss/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+
+    
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Build Shit in CSS</h1>
+    <ol class="problems">
+        <li><a href="/buildcss/">Introduction</a></li>
+        <li><a href="/buildcss/display/">Blocks, Inlines, and Display</a></li>
+        <li><a href="/buildcss/selectors/">Selectors</a></li>
+        <li><a href="/buildcss/boxmodel/">Box Model</a></li>
+        <li><a href="/buildcss/floating/">Floating+Clearing I</a></li>
+        <li><a href="/buildcss/clearing-floats/">Floating+Clearing II</a></li>
+        <li><a href="/buildcss/centering/">Centering</a></li>
+        <li><a href="/buildcss/positioning/">Positioning</a></li>
+        <li><a href="/buildcss/vertical-centering/">Vertical Centering and Radius</a></li>
+        <li><a href="/buildcss/zindex/">Z-Index</a></li>
+        <li><a href="/buildcss/pseudoelements/">:before and :after</a></li>
+        <li><a href="/buildcss/columns/">Columns</a></li>
+        <li><a href="/buildcss/grids/">Image Grids</a></li>
+        <li><a href="/buildcss/no-bootstrap/">Say No To Bootstrap</a></li>
+        <li><a href="/buildcss/baseline/">The Baseline</a></li>
+        <li><a href="/buildcss/forms/">Forms</a></li>
+        <li><a href="/buildcss/tables/">Tables</a></li>
+        <li><a href="/buildcss/background-image/">Background Image</a></li>
+        <li><a href="/buildcss/transform/">More Transforms</a></li>
+        <li><a href="/buildcss/other/">Other Resources I like</a></li>
+    </ol>
+
+    <footer>Created by <a href="http://whatisjasongoldstein.com">Jason Goldstein</a>. Help improve this! Bring your ideas to <a href="https://github.com/whatisjasongoldstein/buildcss/issues">Github</a>.</footer>
+</div>
+
+<figure class="problem" id="problem">
+    <div class="iframe-wrapper">
+        <a href="/buildcss/problems/columns.html" target="_blank"></a>
+        <iframe src="/buildcss/problems/columns.html"></iframe>
+    </div>
+    <figcaption>
+<h1 id="columns">Columns</h1>
+<p>Columns are tricky. Try to build this.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The header is easy, that&rsquo;s just spanning the full width of the page.</li>
+<li>The two columns float next to each other at 50% width.<ul>
+<li>I&rsquo;d like to give them some breathing space, so I set each to have some padding
+the inside. To make this be counted towards the 50% instead of add to it (which would
+make the elements over 50% each and not fit on the line), set <code>box-sizing:border-box</code>.</li>
+</ul>
+</li>
+<li>To make the footer clear floats, it needs to be a block element with <code>clear:both</code>.<ul>
+<li>But by default, no matter how much <code>margin-top</code> you put on the footer, it won&rsquo;t create
+a gap between the footer and the columns.<ul>
+<li>This is because floats are broken out of from the regular layout, so they <strong>only respect margins from other floats</strong>.</li>
+<li>The exception is margins coming from above. You can push a float down with a margin, but margins coming from the side or bottom will have no effect.</li>
+</ul>
+</li>
+<li>There are two ways to fix this:<ul>
+<li>Setting margin bottom on the columns.</li>
+<li>We can fix this by putting a wrapping div around both elements, which can clear the floats
+using either <code>overflow:hidden</code> or an after clearfix, e.g., <code>.wrapper:after {content: ""; display:block; clear:both;}</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="the-wrong-answer">The &ldquo;Wrong&rdquo; Answer</h3>
+<p>You <em>could</em> put a <code>&lt;div style="clear:both"&gt;&lt;/div&gt;</code> between the footer and the columns. It would clear the floats and provide something that the footer&rsquo;s top margin could push against. But then you&rsquo;d have an empty, unsemantic element that you don&rsquo;t need in your code.</p>
+<p>The very thought of this should fill you with disgust, that such ugliness should be allowed to blight your code even though your users would never notice. </p>
+<h3 id="aside">Aside</h3>
+<p><code>columns: 2;</code> is a thing in CSS3, however, it still doesn&rsquo;t feel ready for prime time. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/columns">Read more on MDN</a>.</p>        
+    </figcaption>
+</figure>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script src="/buildcss/app.min.js"></script>
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100908046); }catch(e){}</script>
+
+</body>
+</html>
