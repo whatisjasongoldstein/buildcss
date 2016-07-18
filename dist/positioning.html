@@ -39,13 +39,35 @@
 
 <figure class="problem" id="problem">
     <div class="iframe-wrapper">
-        <a href="{{ iframe_src }}" target="_blank"></a>
-        <iframe src="{{ iframe_src }}"></iframe>
+        <a href="problems/positioning.html" target="_blank"></a>
+        <iframe src="problems/positioning.html"></iframe>
     </div>
     <figcaption>
-        {% filter markdown %}
-        {% include text %}
-        {% endfilter %}        
+<h1>Positions</h1>
+<h2>Goals:</h2>
+<ol>
+<li>The gray box should have a number in each corner.</li>
+<li>It should also have a span that's pushed from the top and left by <code>50px</code></li>
+<li>Make a sticky header</li>
+</ol>
+<h3>Notes:</h3>
+<ul>
+<li><code>position: absolute;</code> makes <code>top</code>/<code>left</code>/<code>bottom</code>/<code>right</code> set the exact
+number of pixels an element will appear relative to its innermost container that <em>also</em>
+has a postiion set.<ul>
+<li>So putting an absolutely positioned element inside a relative or absolute positioned
+element would work like you expect. But if you don't set the position on the parent
+(the default position is <code>static</code>) it would be ignored, and the position will be set based
+on the next container up the DOM that does have a position (or the whole page).</li>
+<li>This is odd, but useful.</li>
+<li>Absolute positioned elements don't take up space in the layout, so they will sometimes
+wind up on top of other things. </li>
+</ul>
+</li>
+<li><code>position: relative</code> moves things around from their default position. This means
+    <code>position:relative; left: 10px;</code> would slide an element to the left by 10 pixels.</li>
+<li><code>position:fixed</code> makes something sticky, and it will stay put as you scroll.</li>
+</ul>        
     </figcaption>
 </figure>
 

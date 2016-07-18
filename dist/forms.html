@@ -39,13 +39,52 @@
 
 <figure class="problem" id="problem">
     <div class="iframe-wrapper">
-        <a href="{{ iframe_src }}" target="_blank"></a>
-        <iframe src="{{ iframe_src }}"></iframe>
+        <a href="problems/forms.html" target="_blank"></a>
+        <iframe src="problems/forms.html"></iframe>
     </div>
     <figcaption>
-        {% filter markdown %}
-        {% include text %}
-        {% endfilter %}        
+<h1>Forms</h1>
+<p>Styling forms is tricky but important. In a large project,
+you'll want to create some styles that you can reuse on all your forms
+so you don't have to style them indiviually.</p>
+<p>This form markup is similar to what a web framework - say, Django - would generate.</p>
+<pre><code>&lt;form action="." method="POST"&gt;    
+    &lt;p&gt;
+        &lt;label&gt;Name&lt;/label&gt;
+        &lt;input type="text"&gt;
+    &lt;/p&gt;
+
+    &lt;p class="required"&gt;
+        &lt;label&gt;Preferred Taco&lt;/label&gt;
+        &lt;select&gt;
+            &lt;option&gt;Carne&lt;/option&gt;
+            &lt;option&gt;Al Pastor&lt;/option&gt;
+            &lt;option&gt;Don't care, just add guac&lt;/option&gt;
+            &lt;option&gt;All of Them&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        &lt;label&gt;Spicy?&lt;/label&gt;
+        &lt;input type="checkbox"&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        &lt;label&gt;Address&lt;/label&gt;
+        &lt;textarea&gt;&lt;/textarea&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        &lt;input type="submit" value="Send Tacos!"&gt;   
+    &lt;/p&gt;
+&lt;/form&gt;
+</code></pre>
+<h3>Hints</h3>
+<ul>
+<li>Use <code>:before</code> to make the astericks on required fields.</li>
+<li>Remember vertical-align when you can't figure out how to make textarea hang down.</li>
+<li>Setting the width on <code>label</code> is a good way to make everything line up.</li>
+</ul>        
     </figcaption>
 </figure>
 

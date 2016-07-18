@@ -39,13 +39,44 @@
 
 <figure class="problem" id="problem">
     <div class="iframe-wrapper">
-        <a href="{{ iframe_src }}" target="_blank"></a>
-        <iframe src="{{ iframe_src }}"></iframe>
+        <a href="problems/tables.html" target="_blank"></a>
+        <iframe src="problems/tables.html"></iframe>
     </div>
     <figcaption>
-        {% filter markdown %}
-        {% include text %}
-        {% endfilter %}        
+<h1>Tables</h1>
+<p>Tables are for tabular data, never for layout.</p>
+<p>Visually, they're advantage is they'll automatically fit the cells to the available space.</p>
+<p>Here's the markup. (If you're not familiar with any of the elements, you should look them up on MDN.)</p>
+<pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Content&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Part 1&lt;/td&gt;
+            &lt;td&gt;Adipisicing in magna ipsum ullamco irure et sunt ex deserunt&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Part 2&lt;/td&gt;
+            &lt;td&gt;Velit amet exercitation aute deserunt do anim consectetur aliqua nulla&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Part 1&lt;/td&gt;
+            &lt;td&gt;Adipisicing in magna ipsum ullamco irure et sunt ex deserunt&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Part 2&lt;/td&gt;
+            &lt;td&gt;Velit amet exercitation aute deserunt do anim consectetur aliqua nulla&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<h3>Notes</h3>
+<ul>
+<li>Setting <code>table {border-collapse: collapse;}</code> removes the spacing between cells so you can control it with padding.</li>
+<li>Your knowledge of <code>vertical-align</code> and <code>nth-child</code> might be helpful on this one.</li>
+</ul>        
     </figcaption>
 </figure>
 

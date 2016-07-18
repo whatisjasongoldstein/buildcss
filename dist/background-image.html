@@ -39,13 +39,32 @@
 
 <figure class="problem" id="problem">
     <div class="iframe-wrapper">
-        <a href="{{ iframe_src }}" target="_blank"></a>
-        <iframe src="{{ iframe_src }}"></iframe>
+        <a href="problems/background-image.html" target="_blank"></a>
+        <iframe src="problems/background-image.html"></iframe>
     </div>
     <figcaption>
-        {% filter markdown %}
-        {% include text %}
-        {% endfilter %}        
+<h1>Background Image</h1>
+<p>Take a look at the MDN page for <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image"><code>background-image</code></a>, and use this picture of a Husky: <a href="http://whatisjasongoldstein.github.io/buildcss/img/husky.jpg"><code>http://whatisjasongoldstein.github.io/buildcss/img/husky.jpg</code></a>.</p>
+<p>The image is square, but the boxes we're using it as a background on are not. (You can tell this where the orange <code>background-color</code> shows through.)</p>
+<p>Going left to right, do this:</p>
+<ol>
+<li>The image should <code>cover</code> the box (hint: <code>background-size: cover</code>) and be positioned so the tops align.</li>
+<li>The image should be contained entirely within the box and centered horizontally. (<code>background-size:contain</code>).<ul>
+<li>Did the image start tiling when there's extra space? Try playing with <code>background-repeat</code>.</li>
+</ul>
+</li>
+<li>The image should be 50% of the box's height and centered (hint: look at <code>background-position</code>).</li>
+<li>Cover the box again, but this time, center the image so you can see the Husky's nose.</li>
+<li>Tile a stripe of the image (<code>background-repeat</code>), positioned 10px from the top. Make sure never to cut the image, it shouldn't be cut off at the box.<ul>
+<li>Try setting <code>background-size</code> to a percentage to make that happen.</li>
+</ul>
+</li>
+<li>Use <code>background-size</code> and <code>background-position</code> to zoom in.</li>
+</ol>
+<hr />
+<p><small>
+<strong>Special Thanks:</strong> The giant fluffy creature shown above is Koda. Because we live in a ridiculous world, you can see more pictures of her on <a href="https://www.instagram.com/thatkoda/">Instagram</a>.
+</small></p>        
     </figcaption>
 </figure>
 
