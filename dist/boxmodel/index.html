@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Shit in CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+
+    
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Build Shit in CSS</h1>
+    <ol class="problems">
+        <li><a href="/">Introduction</a></li>
+        <li><a href="/display/">Blocks, Inlines, and Display</a></li>
+        <li><a href="/selectors/">Selectors</a></li>
+        <li><a href="/boxmodel/">Box Model</a></li>
+        <li><a href="/floating/">Floating+Clearing I</a></li>
+        <li><a href="/clearing-floats/">Floating+Clearing II</a></li>
+        <li><a href="/centering/">Centering</a></li>
+        <li><a href="/positioning/">Positioning</a></li>
+        <li><a href="/vertical-centering/">Vertical Centering and Radius</a></li>
+        <li><a href="/zindex/">Z-Index</a></li>
+        <li><a href="/pseudoelements/">:before and :after</a></li>
+        <li><a href="/columns/">Columns</a></li>
+        <li><a href="/grids/">Image Grids</a></li>
+        <li><a href="/no-bootstrap/">Say No To Bootstrap</a></li>
+        <li><a href="/baseline/">The Baseline</a></li>
+        <li><a href="/forms/">Forms</a></li>
+        <li><a href="/tables/">Tables</a></li>
+        <li><a href="/background-image/">Background Image</a></li>
+        <li><a href="/transform/">More Transforms</a></li>
+        <li><a href="/other/">Other Resources I like</a></li>
+    </ol>
+
+    <footer>Created by <a href="http://whatisjasongoldstein.com">Jason Goldstein</a>. Help improve this! Bring your ideas to <a href="https://github.com/whatisjasongoldstein/buildcss/issues">Github</a>.</footer>
+</div>
+
+<figure class="problem" id="problem">
+    <div class="iframe-wrapper">
+        <a href="/problems/boxmodel.html" target="_blank"></a>
+        <iframe src="/problems/boxmodel.html"></iframe>
+    </div>
+    <figcaption>
+<h1 id="box-model">Box Model</h1>
+<p>MDN has a pretty good <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">intro to the box model</a>.</p>
+<p>This one should be self explanatory.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Read about <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">box-sizing</a>, a CSS property that determines, well, exactly what you need.</li>
+<li>Notice that the margins &ldquo;collapse&rdquo; - when the box with <code>margin: 40px</code> is next to a box with <code>margin: 20px</code>, the two boxes render 20 pixels apart. This is because <strong>margins don&rsquo;t add together</strong> - they dictate the minimum space
+the element needs to be spaced from other stuff. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">MDN has more on this</a>.</li>
+</ul>        
+    </figcaption>
+</figure>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script src="/app.min.js"></script>
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100908046); }catch(e){}</script>
+
+</body>
+</html>
