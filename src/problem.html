@@ -5,6 +5,40 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/app.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+
+    {% if redirect %}
+    <script type="text/javascript">
+        // redirect querystrings to paths
+        (function(){
+            var slugs = [
+                "display",
+                "selectors",
+                "boxmodel",
+                "floating",
+                "clearing-floats",
+                "centering",
+                "positioning",
+                "vertical-centering",
+                "zindex",
+                "pseudoelements",
+                "columns",
+                "grids",
+                "no-bootstrap",
+                "baseline",
+                "forms",
+                "tables",
+                "background-image",
+                "transform",
+                "other"
+            ]
+            var slug = window.location.search.split("?")[1];
+            if (window.location.pathname === "/" && (slugs.indexOf(slug) >= 0)) {
+                window.location.href = window.location.origin + "/" + slug + "/";
+            }
+        })();
+    </script>
+    {% endif %}
+    
 </head>
 <body>
 

@@ -15,11 +15,14 @@ def pages():
     for slug in slugs:
         if slug == "intro":
             filename = "index.html"
+            direct = True
         else:
             filename = "%s/index.html" % slug
+            direct = False
         page = Page(template="problem.html", outfile=filename, context={
             "iframe_src": "/problems/%s.html" % slug,
             "text": "problems/%s.md" % slug,
+            "redirect": redirect,
         })
         iframe = Copy(infile="problems/%s.html" % slug)
         actions.append(page)
