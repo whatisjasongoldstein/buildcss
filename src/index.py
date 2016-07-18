@@ -3,6 +3,7 @@ from beagle.decorators import action
 from beagle.commands import Page, Copy, Concat
 
 PROBLEMS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "problems")
+SITE_PREFIX = "/buildcss/"
 
 @action
 def pages():
@@ -20,9 +21,10 @@ def pages():
             filename = "%s/index.html" % slug
             redirect = False
         page = Page(template="problem.html", outfile=filename, context={
-            "iframe_src": "/problems/%s.html" % slug,
+            "iframe_src": "%sproblems/%s.html" % (SITE_PREFIX, slug),
             "text": "problems/%s.md" % slug,
             "redirect": redirect,
+            "site_url": SITE_PREFIX,
         })
         iframe = Copy(infile="problems/%s.html" % slug)
         actions.append(page)
@@ -31,7 +33,7 @@ def pages():
 
 @action
 def assets():
-    things = ["micromarkdown.js", "underscore-min.js", "app.css", "app.js", "problems"]
+    things = ["micromarkdown.js", "underscore-min.js", "app.css", "problems", "README.md"]
     copies = [Copy(**{"infile": thing}) for thing in things]
     return copies
 
