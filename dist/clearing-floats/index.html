@@ -42,8 +42,8 @@
         <iframe src="/problems/clearing-floats.html"></iframe>
     </div>
     <figcaption>
-<h1>Clearing Floats</h1>
-<p>Often you'll want things that are side by side on opposite ends of a container.</p>
+<h1 id="clearing-floats">Clearing Floats</h1>
+<p>Often you&rsquo;ll want things that are side by side on opposite ends of a container.</p>
 <p>By default, floating elements overhang their container, as you can see in the top example.</p>
 <p>There are two ways to fix this:</p>
 <ol>
@@ -52,16 +52,16 @@ causes the container to extend to fit the floats.</li>
 <li>Set an <code>:after</code> psuedoelement on the container and have it <code>clear: both</code>.<ul>
 <li>This is useful if you want to be able to hang outside the container in another way.
 In the third example, the boxes stick out the top. </li>
-<li>In all the examples, there's a <code>box-shadow</code> that would be clipped by <code>overflow: hidden;</code></li>
+<li>In all the examples, there&rsquo;s a <code>box-shadow</code> that would be clipped by <code>overflow: hidden;</code></li>
 </ul>
 </li>
 </ol>
-<h2>Notes</h2>
+<h2 id="notes">Notes</h2>
 <ul>
 <li>Use <code>&lt;hr&gt;</code> for the lines between examples.</li>
-<li><code>myelement:after</code> clears a psuedoelemnt. You need to set it's <code>content</code> and <code>display</code> to make it useful. 
+<li><code>myelement:after</code> clears a psuedoelemnt. You need to set it&rsquo;s <code>content</code> and <code>display</code> to make it useful. 
 <code>content</code> is probably blank in this case.<ul>
-<li>We'll cover more on psuedo-elements later.</li>
+<li>We&rsquo;ll cover more on psuedo-elements later.</li>
 </ul>
 </li>
 </ul>        

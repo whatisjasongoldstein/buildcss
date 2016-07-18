@@ -42,19 +42,19 @@
         <iframe src="/problems/columns.html"></iframe>
     </div>
     <figcaption>
-<h1>Columns</h1>
+<h1 id="columns">Columns</h1>
 <p>Columns are tricky. Try to build this.</p>
-<h2>Notes</h2>
+<h2 id="notes">Notes</h2>
 <ul>
-<li>The header is easy, that's just spanning the full width of the page.</li>
+<li>The header is easy, that&rsquo;s just spanning the full width of the page.</li>
 <li>The two columns float next to each other at 50% width.<ul>
-<li>I'd like to give them some breathing space, so I set each to have some padding
+<li>I&rsquo;d like to give them some breathing space, so I set each to have some padding
 the inside. To make this be counted towards the 50% instead of add to it (which would
 make the elements over 50% each and not fit on the line), set <code>box-sizing:border-box</code>.</li>
 </ul>
 </li>
 <li>To make the footer clear floats, it needs to be a block element with <code>clear:both</code>.<ul>
-<li>But by default, no matter how much <code>margin-top</code> you put on the footer, it won't create
+<li>But by default, no matter how much <code>margin-top</code> you put on the footer, it won&rsquo;t create
 a gap between the footer and the columns.<ul>
 <li>This is because floats are broken out of from the regular layout, so they <strong>only respect margins from other floats</strong>.</li>
 <li>The exception is margins coming from above. You can push a float down with a margin, but margins coming from the side or bottom will have no effect.</li>
@@ -69,11 +69,11 @@ using either <code>overflow:hidden</code> or an after clearfix, e.g., <code>.wra
 </ul>
 </li>
 </ul>
-<h3>The "Wrong" Answer</h3>
-<p>You <em>could</em> put a <code>&lt;div style="clear:both"&gt;&lt;/div&gt;</code> between the footer and the columns. It would clear the floats and provide something that the footer's top margin could push against. But then you'd have an empty, unsemantic element that you don't need in your code.</p>
+<h3 id="the-wrong-answer">The &ldquo;Wrong&rdquo; Answer</h3>
+<p>You <em>could</em> put a <code>&lt;div style="clear:both"&gt;&lt;/div&gt;</code> between the footer and the columns. It would clear the floats and provide something that the footer&rsquo;s top margin could push against. But then you&rsquo;d have an empty, unsemantic element that you don&rsquo;t need in your code.</p>
 <p>The very thought of this should fill you with disgust, that such ugliness should be allowed to blight your code even though your users would never notice. </p>
-<h3>Aside</h3>
-<p><code>columns: 2;</code> is a thing in CSS3, however, it still doesn't feel ready for prime time. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/columns">Read more on MDN</a>.</p>        
+<h3 id="aside">Aside</h3>
+<p><code>columns: 2;</code> is a thing in CSS3, however, it still doesn&rsquo;t feel ready for prime time. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/columns">Read more on MDN</a>.</p>        
     </figcaption>
 </figure>
 

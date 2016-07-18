@@ -42,7 +42,7 @@
         <iframe src="/problems/zindex.html"></iframe>
     </div>
     <figcaption>
-<h1>Z-Index</h1>
+<h1 id="z-index">Z-Index</h1>
 <p><code>z-index</code> is how you control the order of overlapping layers.</p>
 <p>For this example, you need to use the following html:</p>
 <pre><code>&lt;div class="box green"&gt;&lt;/div&gt;
@@ -50,13 +50,13 @@
 &lt;div class="box red"&gt;&lt;/div&gt;
 </code></pre>
 <p>By default, these boxes would be stacked with green on the bottom, red on top, and blue in the middle.
-We're going to manipulate that.</p>
-<h2>Notes:</h2>
+We&rsquo;re going to manipulate that.</p>
+<h2 id="notes">Notes:</h2>
 <ul>
-<li>Only elements with a set <code>position</code> (not the default) can have <code>z-index</code>. That's not an issue for this case,
+<li>Only elements with a set <code>position</code> (not the default) can have <code>z-index</code>. That&rsquo;s not an issue for this case,
 because we need to set a position to get the squares to overlap anyway.</li>
 <li><code>z-index: 10;</code> sets an arbitrary number. Higher ones go on top.</li>
-<li>It's a good idea to leave some space between layers so if you need to place things between them in the future, you don't need to alter all the values. <ul>
+<li>It&rsquo;s a good idea to leave some space between layers so if you need to place things between them in the future, you don&rsquo;t need to alter all the values. <ul>
 <li><code>z-index:1;</code> and <code>z-index:2</code>; is a bad idea. </li>
 <li><code>z-index:10;</code> and <code>index:20;</code> is better.</li>
 </ul>

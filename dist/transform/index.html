@@ -42,20 +42,20 @@
         <iframe src="/problems/transform.html"></iframe>
     </div>
     <figcaption>
-<h1>Transforms</h1>
+<h1 id="transforms">Transforms</h1>
 <p>Transforms are a useful new property in CSS for rotating and warping.
-You've already used it to center things vertically. We're going to do one more thing,
+You&rsquo;ve already used it to center things vertically. We&rsquo;re going to do one more thing,
 since transforms can be strange.</p>
 <p>This is your markup: <code>&lt;h1&gt;Classified&lt;/h1&gt;</code></p>
-<h2>Notes</h2>
+<h2 id="notes">Notes</h2>
 <ul>
-<li>You'll need multiple tranform properties. One to rotate, and one to do the vertical centering.<ul>
+<li>You&rsquo;ll need multiple tranform properties. One to rotate, and one to do the vertical centering.<ul>
 <li>Putting two transform properties on a CSS block, like having two <code>color</code> properties, causes
-one to overwrite the other. Instead, string the values together: <code>translate(-50%, -50%) transform: rotate(90deg) scale(1.5)</code>. (Obviously, these aren't the real values.)</li>
+one to overwrite the other. Instead, string the values together: <code>translate(-50%, -50%) transform: rotate(90deg) scale(1.5)</code>. (Obviously, these aren&rsquo;t the real values.)</li>
 </ul>
 </li>
 <li>Also look up <code>transform-origin</code>. It might help.</li>
-<li>Since you're centering something verically, you'll need the container (<code>body</code>) to the width
+<li>Since you&rsquo;re centering something verically, you&rsquo;ll need the container (<code>body</code>) to the width
 and height fo the window.</li>
 <li>Rotating the element screws up the calculations for subsequent transforms. Do the <code>translate</code> step fo the <code>rotate()</code> first.</li>
 <li>Only IE10 and up support <code>transform</code>. When using cutting edge CSS tools, always consider them progress enhancements. Make sure the design works to your satisfaction without them.</li>

@@ -42,7 +42,7 @@
         <iframe src="/problems/grids.html"></iframe>
     </div>
     <figcaption>
-<h1>Bear Awareness (in Grid Form)</h1>
+<h1 id="bear-awareness-in-grid-form">Bear Awareness (in Grid Form)</h1>
 <p>A common way to lay out a list of visual things is a grid like above.</p>
 <p>This one may be difficult. Especially since you have to use this markup:</p>
 <pre><code>&lt;ul class="images"&gt;
@@ -99,29 +99,29 @@
     &lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
-<h3>Notes</h3>
+<h3 id="notes">Notes</h3>
 <ul>
 <li>By default, <code>img</code> is an inline element, and will get a mysterious space around it
 when when margin is set to zero. This is because inline elements get space around them
-from the <code>line-height</code>. You'll want to set your <code>.figure img</code> to <code>display: block</code> so it fills
-the space and doesn't have weird layout effects.</li>
+from the <code>line-height</code>. You&rsquo;ll want to set your <code>.figure img</code> to <code>display: block</code> so it fills
+the space and doesn&rsquo;t have weird layout effects.</li>
 <li>Because I like to make things hard, the container has a very thing gray line around it. This means
 you have to use margins to create space between items, but not pressing the container. But.. how?<ul>
 <li>There are many ways to do this. I take this approach:<ol>
-<li>The items in the list are in charge of layout. If there was no space between them, they'd
+<li>The items in the list are in charge of layout. If there was no space between them, they&rsquo;d
 be 33.3333% wide with a <code>float: left</code>. But I want to use 1% of that space for margin on each item.<ul>
-<li>Since there's only space between the first/middle and last/middle item in each row,
+<li>Since there&rsquo;s only space between the first/middle and last/middle item in each row,
 I subtract 2% from the whole, and each item is 32.6666% wide.<ul>
-<li>Don't worry about these ridiculous percentages. The browser will usually take care of it. Usually.</li>
+<li>Don&rsquo;t worry about these ridiculous percentages. The browser will usually take care of it. Usually.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Set this 1% to <code>margin-left</code> only. Now you don't have to worry about the items at the end of the line - they'll set neatly against the edge.<ul>
-<li>This is okay because combined margins doesn't add them together.</li>
+<li>Set this 1% to <code>margin-left</code> only. Now you don&rsquo;t have to worry about the items at the end of the line - they&rsquo;ll set neatly against the edge.<ul>
+<li>This is okay because combined margins doesn&rsquo;t add them together.</li>
 </ul>
 </li>
-<li>However, we need to ensure the first item in a line doesn't have a leading margin. For that, I style <code>.images li:nth-child(3n+1)</code> to <code>clear: left</code> and <code>margin-left: 0</code>.<ul>
+<li>However, we need to ensure the first item in a line doesn&rsquo;t have a leading margin. For that, I style <code>.images li:nth-child(3n+1)</code> to <code>clear: left</code> and <code>margin-left: 0</code>.<ul>
 <li><code>nth-child</code> is a psuedoclass that can select even, odd, third, etc, of the matching elements. This is useful for striping tables, or clearing the margin of every third+1 element. Read about it on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%3Anth-child">MDN</a>.</li>
 <li>Why does it match the first row? Because if <code>n</code> is <code>0</code>, 3n+1 is 1, or the first element.</li>
 </ul>
@@ -131,19 +131,19 @@ I subtract 2% from the whole, and each item is 32.6666% wide.<ul>
 </ul>
 </li>
 <li>The <code>figcaption</code> is on top of the image. Perhaps <code>position: absolute</code> is a useful tool for this.</li>
-<li>The <code>figcaption</code> is also transparent. You can do that with <code>rgba</code> colors. If you've never seen this before, you should <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgba()">look it up on MDN</a>.<ul>
+<li>The <code>figcaption</code> is also transparent. You can do that with <code>rgba</code> colors. If you&rsquo;ve never seen this before, you should <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgba()">look it up on MDN</a>.<ul>
 <li>You may be sensing a pattern here. When in doubt, use MDN.</li>
 </ul>
 </li>
 </ul>
-<p>The images are from <a href="https://placebear.com">placebear.com</a>. It's exactly what it sounds like it is.
-There's also <a href="https://placekitten.com">placekitten.com</a>, if you want to make "I can haz placeholder art" jokes.</p>
-<h3>For Bonus Points</h3>
+<p>The images are from <a href="https://placebear.com">placebear.com</a>. It&rsquo;s exactly what it sounds like it is.
+There&rsquo;s also <a href="https://placekitten.com">placekitten.com</a>, if you want to make &ldquo;I can haz placeholder art&rdquo; jokes.</p>
+<h3 id="for-bonus-points">For Bonus Points</h3>
 <p>Right now, if there were a 7th image, it would hang on the left.
 What if you wanted it centered?</p>
-<p>Perhaps, rather than floating, you could make a layout like this where the <code>li</code>'s are 
-<code>inline-block</code>s, and set <code>text-align:center;</code> on the parent, so if there's 3 the fill the row, 
-but if there's 1 or 2 they're centered across the row.</p>
+<p>Perhaps, rather than floating, you could make a layout like this where the <code>li</code>&lsquo;s are 
+<code>inline-block</code>s, and set <code>text-align:center;</code> on the parent, so if there&rsquo;s 3 the fill the row, 
+but if there&rsquo;s 1 or 2 they&rsquo;re centered across the row.</p>
 <p>I bet that would work 😉</p>        
     </figcaption>
 </figure>

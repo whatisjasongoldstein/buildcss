@@ -42,24 +42,24 @@
         <iframe src="/problems/positioning.html"></iframe>
     </div>
     <figcaption>
-<h1>Positions</h1>
-<h2>Goals:</h2>
+<h1 id="positions">Positions</h1>
+<h2 id="goals">Goals:</h2>
 <ol>
 <li>The gray box should have a number in each corner.</li>
-<li>It should also have a span that's pushed from the top and left by <code>50px</code></li>
+<li>It should also have a span that&rsquo;s pushed from the top and left by <code>50px</code></li>
 <li>Make a sticky header</li>
 </ol>
-<h3>Notes:</h3>
+<h3 id="notes">Notes:</h3>
 <ul>
 <li><code>position: absolute;</code> makes <code>top</code>/<code>left</code>/<code>bottom</code>/<code>right</code> set the exact
 number of pixels an element will appear relative to its innermost container that <em>also</em>
 has a postiion set.<ul>
 <li>So putting an absolutely positioned element inside a relative or absolute positioned
-element would work like you expect. But if you don't set the position on the parent
+element would work like you expect. But if you don&rsquo;t set the position on the parent
 (the default position is <code>static</code>) it would be ignored, and the position will be set based
 on the next container up the DOM that does have a position (or the whole page).</li>
 <li>This is odd, but useful.</li>
-<li>Absolute positioned elements don't take up space in the layout, so they will sometimes
+<li>Absolute positioned elements don&rsquo;t take up space in the layout, so they will sometimes
 wind up on top of other things. </li>
 </ul>
 </li>
