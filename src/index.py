@@ -33,7 +33,7 @@ def pages():
 
 @action
 def assets():
-    things = ["micromarkdown.js", "underscore-min.js", "app.css", "problems", 
+    things = ["underscore-min.js", "app.css", "problems", 
         "README.md", "img/"]
     copies = [Copy(**{"infile": thing}) for thing in things]
     return copies
