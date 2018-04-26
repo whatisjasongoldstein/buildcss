@@ -76,18 +76,12 @@
         <iframe src="{{ iframe_src }}"></iframe>
     </div>
     <figcaption>
-        {% filter markdown %}
-        {% include text %}
-        {% endfilter %}        
+        {% block text %}{% endblock text %}
     </figcaption>
 </figure>
 
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
 <script src="{{ site_url }}app.min.js"></script>
-
-<script src="//static.getclicky.com/js" type="text/javascript"></script>
-<script type="text/javascript">try{ clicky.init(100908046); }catch(e){}</script>
-
 </body>
 </html>

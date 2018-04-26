@@ -1,0 +1,31 @@
+{
+  "name": "buildcss",
+  "version": "2.0.0",
+  "description": "Build Shit in CSS",
+  "main": "gulp.babel.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.7",
+    "gulp": "^3.9.1",
+    "gulp-nunjucks": "^3.1.1",
+    "marked": "^0.3.19"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatisjasongoldstein/buildcss.git"
+  },
+  "author": "Jason Goldstein",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/whatisjasongoldstein/buildcss/issues"
+  },
+  "homepage": "https://github.com/whatisjasongoldstein/buildcss#readme"
+}

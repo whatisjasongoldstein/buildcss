@@ -1,1 +1,0 @@
--e git+git@github.com:whatisjasongoldstein/beagle.git@master#egg=beagle
