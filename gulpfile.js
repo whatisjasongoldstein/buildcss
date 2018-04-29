@@ -8,7 +8,7 @@ const nunjucks = require('nunjucks');
 const reload = browserSync.reload;
 const rename = require("gulp-rename");
 
-const dist = 'docs/buildcss';
+const dist = 'docs';
 const marked = require('marked');
 
 
@@ -20,7 +20,6 @@ const templateEnv = new nunjucks.Environment(
 templateEnv.addFilter('markdown', function(str) {
   return new nunjucks.runtime.SafeString(marked(str));
 });
-
 
 //
 // Copy html test pages.
@@ -67,7 +66,10 @@ gulp.task('serve', ['build'], () => {
     reloadOnRestart: true,
     startPath: '/buildcss/',
     server: {
-      baseDir: ['docs']
+      baseDir: ['docs'],
+      routes: {
+        '/buildcss/': 'docs'
+      }
     }
   });
 
