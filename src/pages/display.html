@@ -1,3 +1,7 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
 # Display
 
 This is about the [Display](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property.
@@ -15,3 +19,8 @@ properties to control them.
 You'll use all three to build the above.
 
 Good luck!
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/display.html", text) }}
+{% endblock content %}

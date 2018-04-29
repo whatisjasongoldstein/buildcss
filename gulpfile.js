@@ -6,9 +6,11 @@ const gulpNunjucks = require('gulp-nunjucks');
 const nunjucks = require('nunjucks');
 
 const reload = browserSync.reload;
+const rename = require("gulp-rename");
 
 const dist = 'dist/buildcss';
 const marked = require('marked');
+
 
 // const templateEnv = new nunjucks.Environment();
 const templateEnv = new nunjucks.Environment(
@@ -24,11 +26,17 @@ templateEnv.addFilter('markdown', function(str) {
 // Copy html test pages.
 //
 gulp.task('html', () => {
-  gulp.src('src/**/*.html')
+  gulp.src('src/pages/*.html')
     .pipe(gulpNunjucks.compile(null, {
       env: templateEnv,
     }))
-    .pipe(gulp.dest(dist));
+    .pipe(rename(function (path) {
+      // Make all urls /foo/ instead of foo.html
+      if (path.basename !== 'index') {
+        path.basename = `${ path.basename }/index`
+      }
+    }))
+    .pipe(gulp.dest(dist))
 });
 
 //
