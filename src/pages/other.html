@@ -1,6 +1,7 @@
 {% extends "pages/base.html" %}
 {% block content %}
 <figure class="problem">
+  <figcaption>
 {% filter markdown %}
 # I'm done here, but you're just getting started
 
@@ -29,5 +30,6 @@ I'd love to see pull requests from other people! Here's what will get accepted:
 * Stick to the format. One page per problem. Each problem should be a minimal example that demonstrates how to use a particular feature of CSS or tackle a particular challenge.
 * Be clear. Be brief. Be accurate. Avoid jargon&mdash;don't assume the reader knows common programming terms yet.
 {% endfilter %}
+  </figcaption>
 </figure>
 {% endblock content %}
