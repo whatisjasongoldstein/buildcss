@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectors</title>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 0;
+        }
+
+        h1 + h2 {
+            border-bottom: 1px solid red;
+            margin-top: 0;
+            padding-bottom: 5px;
+        }
+
+        h1 i, h2 i {
+            color: blue;
+        }
+
+        ul li:nth-child(even) {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Headline</h1>
+<h2>Subhead, <i>next</i> to headline</h2>
+
+<h2>Subhead elsewhere</h2>
+
+<ul class="even">
+    <li>One</li>
+    <li>Two</li>
+    <li><i>Three</i></li>
+    <li>Four</li>
+</ul>
+
+<h2>Subhead <i>elsewhere</i></h2>
+<p>This subhead <i>doesn't</i> have a border under it.</p>
+
+</body>
+</html>

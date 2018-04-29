@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Shit in CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/buildcss/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Build Shit in CSS</h1>
+    <ol class="problems">
+        <li><a href="/buildcss/">Introduction</a></li>
+        <li><a href="/buildcss/display/">Blocks, Inlines, and Display</a></li>
+        <li><a href="/buildcss/selectors/">Selectors</a></li>
+        <li><a href="/buildcss/boxmodel/">Box Model</a></li>
+        <li><a href="/buildcss/floating/">Floating+Clearing I</a></li>
+        <li><a href="/buildcss/clearing-floats/">Floating+Clearing II</a></li>
+        <li><a href="/buildcss/centering/">Centering</a></li>
+        <li><a href="/buildcss/positioning/">Positioning</a></li>
+        <li><a href="/buildcss/vertical-centering/">Vertical Centering and Radius</a></li>
+        <li><a href="/buildcss/zindex/">Z-Index</a></li>
+        <li><a href="/buildcss/pseudoelements/">:before and :after</a></li>
+        <li><a href="/buildcss/columns/">Columns</a></li>
+        <li><a href="/buildcss/grids/">Image Grids</a></li>
+        <li><a href="/buildcss/no-bootstrap/">Say No To Bootstrap</a></li>
+        <li><a href="/buildcss/baseline/">The Baseline</a></li>
+        <li><a href="/buildcss/forms/">Forms</a></li>
+        <li><a href="/buildcss/tables/">Tables</a></li>
+        <li><a href="/buildcss/background-image/">Background Image</a></li>
+        <li><a href="/buildcss/transform/">More Transforms</a></li>
+        <li><a href="/buildcss/other/">Other Resources I like</a></li>
+    </ol>
+
+    <footer>Created by <a href="http://whatisjasongoldstein.com">Jason Goldstein</a>. Help improve this! Bring your ideas to <a href="https://github.com/whatisjasongoldstein/buildcss/issues">Github</a>.</footer>
+</div>
+
+
+  
+<figure class="problem" id="problem">
+    <div class="iframe-wrapper">
+        <a href="/buildcss/examples/no-bootstrap.html" target="_blank"></a>
+        <iframe src="/buildcss/examples/no-bootstrap.html"></iframe>
+    </div>
+    <figcaption>
+        <h1 id="say-no-to-bootstrap-sometimes-">Say No to Bootstrap (Sometimes)</h1>
+<p>Above, you see several CSS components from <a href="http://getbootstrap.com/">Bootstrap</a>, the popular (and highly opinionated)
+front-end framework.</p>
+<p>I bet you can build them on your own.</p>
+<p>I bet you don&#39;t need Bootstrap at all.</p>
+<h3 id="why-">Why?</h3>
+<p>Some Bootstrap users borrow pieces of it because the tooltip is nice and ready to go. Great.</p>
+<p>But others use it as a crutch because they&#39;re soft on the front-end. But you&#39;re not.
+This is a piece of cake compared to our last exercise.</p>
+<p>You can evaluate front-end tools and take the pieces you need,
+leave behind what you don&#39;t, and not be trapped doing things their way because
+you don&#39;t know how to draw a button.</p>
+<p>Buttons are easy.</p>
+<h3 id="for-extra-points">For Extra Points</h3>
+<p>I didn&#39;t do any hover effects. You could if you want to show off.</p>
+<h4 id="now-tell-us-what-do-you-really-think-">Now tell us, what do you really think?</h4>
+<p>I use Bootstrap&#39;s tooltip in production because it&#39;s nice and it works. I may even borrow 
+a few idea from their form code some day - they&#39;re good at forms.</p>
+<p>Their responsive stuff, however, is a tragic mess.</p>
+<p>But you&#39;re a professional developer. You shouldn&#39;t listen to me. You&#39;ve got an Inspect Element
+and a Github, you can read the code of any front-end library and evaluate it for your purposes.</p>
+
+    </figcaption>
+</figure>
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll("pre code").forEach(function(el) {
+      hljs.highlightBlock(el);
+    });
+</script>
+</body>
+</html>

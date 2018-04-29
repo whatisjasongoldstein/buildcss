@@ -59,7 +59,7 @@ gulp.task('examples', () => {
 //
 // Dev server
 //
-gulp.task('serve', ['files', 'examples', 'html'], () => {
+gulp.task('serve', ['build'], () => {
   browserSync.init({
     notify: true,
     port: 9000,
@@ -77,3 +77,5 @@ gulp.task('serve', ['files', 'examples', 'html'], () => {
 });
 
 gulp.task('default', ['serve']);
+
+gulp.task('build', ['files', 'examples', 'html'])

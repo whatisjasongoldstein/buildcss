@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Shit in CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/buildcss/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Build Shit in CSS</h1>
+    <ol class="problems">
+        <li><a href="/buildcss/">Introduction</a></li>
+        <li><a href="/buildcss/display/">Blocks, Inlines, and Display</a></li>
+        <li><a href="/buildcss/selectors/">Selectors</a></li>
+        <li><a href="/buildcss/boxmodel/">Box Model</a></li>
+        <li><a href="/buildcss/floating/">Floating+Clearing I</a></li>
+        <li><a href="/buildcss/clearing-floats/">Floating+Clearing II</a></li>
+        <li><a href="/buildcss/centering/">Centering</a></li>
+        <li><a href="/buildcss/positioning/">Positioning</a></li>
+        <li><a href="/buildcss/vertical-centering/">Vertical Centering and Radius</a></li>
+        <li><a href="/buildcss/zindex/">Z-Index</a></li>
+        <li><a href="/buildcss/pseudoelements/">:before and :after</a></li>
+        <li><a href="/buildcss/columns/">Columns</a></li>
+        <li><a href="/buildcss/grids/">Image Grids</a></li>
+        <li><a href="/buildcss/no-bootstrap/">Say No To Bootstrap</a></li>
+        <li><a href="/buildcss/baseline/">The Baseline</a></li>
+        <li><a href="/buildcss/forms/">Forms</a></li>
+        <li><a href="/buildcss/tables/">Tables</a></li>
+        <li><a href="/buildcss/background-image/">Background Image</a></li>
+        <li><a href="/buildcss/transform/">More Transforms</a></li>
+        <li><a href="/buildcss/other/">Other Resources I like</a></li>
+    </ol>
+
+    <footer>Created by <a href="http://whatisjasongoldstein.com">Jason Goldstein</a>. Help improve this! Bring your ideas to <a href="https://github.com/whatisjasongoldstein/buildcss/issues">Github</a>.</footer>
+</div>
+
+
+  
+<figure class="problem" id="problem">
+    <div class="iframe-wrapper">
+        <a href="/buildcss/examples/zindex.html" target="_blank"></a>
+        <iframe src="/buildcss/examples/zindex.html"></iframe>
+    </div>
+    <figcaption>
+        <h1 id="z-index">Z-Index</h1>
+<p><code>z-index</code> is how you control the order of overlapping layers.</p>
+<p>For this example, you need to use the following html:</p>
+<pre><code>&lt;div class=&quot;box green&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;box blue&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;box red&quot;&gt;&lt;/div&gt;
+</code></pre><p>By default, these boxes would be stacked with green on the bottom, red on top, and blue in the middle.
+We&#39;re going to manipulate that.</p>
+<h2 id="notes-">Notes:</h2>
+<ul>
+<li>Only elements with a set <code>position</code> (not the default) can have <code>z-index</code>. That&#39;s not an issue for this case,
+because we need to set a position to get the squares to overlap anyway.</li>
+<li><code>z-index: 10;</code> sets an arbitrary number. Higher ones go on top.</li>
+<li>It&#39;s a good idea to leave some space between layers so if you need to place things between them in the future, you don&#39;t need to alter all the values. <ul>
+<li><code>z-index:1;</code> and <code>z-index:2</code>; is a bad idea. </li>
+<li><code>z-index:10;</code> and <code>index:20;</code> is better.</li>
+</ul>
+</li>
+</ul>
+
+    </figcaption>
+</figure>
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll("pre code").forEach(function(el) {
+      hljs.highlightBlock(el);
+    });
+</script>
+</body>
+</html>

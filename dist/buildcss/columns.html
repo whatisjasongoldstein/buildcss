@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Columns</title>
+    <style type="text/css">
+        header {
+            border-bottom: 5px solid red;
+            margin-bottom: 20px;
+        }
+
+        .column-1,
+        .column-2 {
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .column-1 {
+            float: left;
+            padding-right: 10px; 
+        }
+
+        .column-2 {
+            float: left;
+            padding-left: 10px;
+        }
+
+        footer {
+            background: #eee;
+            padding: 10px;
+            margin-top: 20px;
+            clear: both;
+        }
+
+        .wrapper{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<header>The head goes above both columns.</header>
+
+<div class="wrapper">
+    <div class="column-1">
+        in est quis aute dolore anim amet irure pariatur nulla quis occaecat eu cupidatat sunt elit anim in pariatur non ullamco ullamco aliqua anim in officia mollit consectetur consequat sit nostrud consequat elit ex mollit pariatur adipisicing aliquip minim ullamco laboris dolore ea deserunt ipsum sint sunt ullamco excepteur proident
+    </div>
+    <div class="column-2">
+        in irure qui irure amet dolor dolore id officia et proident consectetur labore sint est cupidatat ex ex consectetur occaecat laborum commodo laborum adipisicing cupidatat commodo ipsum in ex laborum enim fugiat aliquip aute laboris qui Lorem voluptate id laboris cillum Lorem ullamco est veniam cillum eiusmod dolor adipisicing fugiat
+    </div>
+</div>
+
+<footer>
+    This is the footer. It should clear both columns.
+</footer>
+
+</body>
+</html>

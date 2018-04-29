@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positioning</title>
+    <style type="text/css">
+        body {
+            margin-top: 50px;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background: #eee;
+            position: relative;
+            z-index: 50;
+        }
+        .one, .two, .three, .four {
+            position: absolute;
+            background: red;
+            color: white;
+            font-style: italic;
+            padding: 4px;
+        }
+        .one {top: 0; left: 0; }
+        .two {top: 0; right: 0; }
+        .three {bottom: 0; left: 0; }
+        .four {bottom: 0; right: 0; }
+
+        .pushed {
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: black;
+            padding: 5px;
+            z-index: 100;
+            color: white;
+            text-align: center;
+            font-family: helvetica, arial, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>Sticky Header!</header>
+
+<div class="box">
+    <span class="one">1</span>
+    <span class="two">2</span>
+    <span class="three">3</span>
+    <span class="four">4</span>
+    <span class="pushed">Coffee?</span>
+</div>
+
+</body>
+</html>

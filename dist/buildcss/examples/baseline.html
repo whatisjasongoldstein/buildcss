@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Baseline</title>
+    <style type="text/css">
+        .loose {
+            line-height: 2;
+        }
+
+        .tight {
+            line-height: 1;
+        }
+
+        .red, .blue, .green {
+            display: inline-block;
+            height: 1em;
+            width: 1em;
+        }
+
+        .red {
+            background: red;
+            vertical-align: middle;
+        }
+
+        .blue {
+            background: blue;
+            vertical-align: top;
+
+        }
+
+        .green {
+            background: green;
+            vertical-align: baseline;
+        }
+
+    </style>
+</head>
+<body>
+
+<h2>Spread Out</h2>
+<p class="loose">Enim in nostrud ea pariatur <span class="red"></span> consequat occaecat tempor consectetur adipisicing <span class="blue"></span> est tempor est qui esse minim do do amet ea exercitation proident consequat sint quis cupidatat id<span class="red"></span> et labore culpa cillum <span class="blue"></span> eiusmod nulla <span class="green"></span> nostrud esse officia do deserunt id ipsum magna Lorem ad commodo culpa eiusmod laborum do eu nulla.</p>
+
+
+<h2>Tight</h2>
+<p class="tight">Enim in nostrud <span class="red"></span> ea pariatur consequat occaecat tempor consectetur adipisicing est tempor est qui esse minim do do amet ea exercitation proident consequat sint quis cupidatat id et labore culpa cillum eiusmod nulla nostrud <span class="blue"></span> esse officia do deserunt id ipsum magna Lorem ad commodo culpa eiusmod laborum do eu nulla.</p>
+
+</body>
+</html>

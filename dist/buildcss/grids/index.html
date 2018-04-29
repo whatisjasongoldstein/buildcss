@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Shit in CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/buildcss/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Build Shit in CSS</h1>
+    <ol class="problems">
+        <li><a href="/buildcss/">Introduction</a></li>
+        <li><a href="/buildcss/display/">Blocks, Inlines, and Display</a></li>
+        <li><a href="/buildcss/selectors/">Selectors</a></li>
+        <li><a href="/buildcss/boxmodel/">Box Model</a></li>
+        <li><a href="/buildcss/floating/">Floating+Clearing I</a></li>
+        <li><a href="/buildcss/clearing-floats/">Floating+Clearing II</a></li>
+        <li><a href="/buildcss/centering/">Centering</a></li>
+        <li><a href="/buildcss/positioning/">Positioning</a></li>
+        <li><a href="/buildcss/vertical-centering/">Vertical Centering and Radius</a></li>
+        <li><a href="/buildcss/zindex/">Z-Index</a></li>
+        <li><a href="/buildcss/pseudoelements/">:before and :after</a></li>
+        <li><a href="/buildcss/columns/">Columns</a></li>
+        <li><a href="/buildcss/grids/">Image Grids</a></li>
+        <li><a href="/buildcss/no-bootstrap/">Say No To Bootstrap</a></li>
+        <li><a href="/buildcss/baseline/">The Baseline</a></li>
+        <li><a href="/buildcss/forms/">Forms</a></li>
+        <li><a href="/buildcss/tables/">Tables</a></li>
+        <li><a href="/buildcss/background-image/">Background Image</a></li>
+        <li><a href="/buildcss/transform/">More Transforms</a></li>
+        <li><a href="/buildcss/other/">Other Resources I like</a></li>
+    </ol>
+
+    <footer>Created by <a href="http://whatisjasongoldstein.com">Jason Goldstein</a>. Help improve this! Bring your ideas to <a href="https://github.com/whatisjasongoldstein/buildcss/issues">Github</a>.</footer>
+</div>
+
+
+  
+<figure class="problem" id="problem">
+    <div class="iframe-wrapper">
+        <a href="/buildcss/examples/grids.html" target="_blank"></a>
+        <iframe src="/buildcss/examples/grids.html"></iframe>
+    </div>
+    <figcaption>
+        <h1 id="bear-awareness-in-grid-form-">Bear Awareness (in Grid Form)</h1>
+<p>A common way to lay out a list of visual things is a grid like above.</p>
+<p>This one may be difficult. Especially since you have to use this markup:</p>
+<pre><code>&lt;ul class=&quot;images&quot;&gt;
+    &lt;li&gt;
+        &lt;figure&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;https://placebear.com/300/200&quot;&gt;
+                &lt;figcaption&gt;Be Aware of the Bear&lt;/figcaption&gt;
+            &lt;/a&gt;
+        &lt;/figure&gt;        
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;figure&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;https://placebear.com/300/201&quot;&gt;
+                &lt;figcaption&gt;Smokey&lt;/figcaption&gt;
+            &lt;/a&gt;
+        &lt;/figure&gt;  
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;figure&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;https://placebear.com/300/202&quot;&gt;
+                &lt;figcaption&gt;Gone Fishin&lt;/figcaption&gt;
+            &lt;/a&gt;
+        &lt;/figure&gt;  
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;figure&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;https://placebear.com/301/203&quot;&gt;
+                &lt;figcaption&gt;I&#39;m stuck&lt;/figcaption&gt;
+            &lt;/a&gt;
+        &lt;/figure&gt;        
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;figure&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;https://placebear.com/305/205&quot;&gt;
+                &lt;figcaption&gt;PDA?&lt;/figcaption&gt;
+            &lt;/a&gt;
+        &lt;/figure&gt;  
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;figure&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;https://placebear.com/301/202&quot;&gt;
+                &lt;figcaption&gt;Hello?&lt;/figcaption&gt;
+            &lt;/a&gt;
+        &lt;/figure&gt;  
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><h3 id="notes">Notes</h3>
+<ul>
+<li>By default, <code>img</code> is an inline element, and will get a mysterious space around it
+when when margin is set to zero. This is because inline elements get space around them
+from the <code>line-height</code>. You&#39;ll want to set your <code>.figure img</code> to <code>display: block</code> so it fills
+the space and doesn&#39;t have weird layout effects.</li>
+<li>Because I like to make things hard, the container has a very thing gray line around it. This means
+you have to use margins to create space between items, but not pressing the container. But.. how?<ul>
+<li>There are many ways to do this. I take this approach:<ol>
+<li>The items in the list are in charge of layout. If there was no space between them, they&#39;d
+be 33.3333% wide with a <code>float: left</code>. But I want to use 1% of that space for margin on each item.<ul>
+<li>Since there&#39;s only space between the first/middle and last/middle item in each row,
+I subtract 2% from the whole, and each item is 32.6666% wide.<ul>
+<li>Don&#39;t worry about these ridiculous percentages. The browser will usually take care of it. Usually.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Set this 1% to <code>margin-left</code> only. Now you don&#39;t have to worry about the items at the end of the line - they&#39;ll set neatly against the edge.<ul>
+<li>This is okay because combined margins doesn&#39;t add them together.</li>
+</ul>
+</li>
+<li>However, we need to ensure the first item in a line doesn&#39;t have a leading margin. For that, I style <code>.images li:nth-child(3n+1)</code> to <code>clear: left</code> and <code>margin-left: 0</code>.<ul>
+<li><code>nth-child</code> is a psuedoclass that can select even, odd, third, etc, of the matching elements. This is useful for striping tables, or clearing the margin of every third+1 element. Read about it on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%3Anth-child">MDN</a>.</li>
+<li>Why does it match the first row? Because if <code>n</code> is <code>0</code>, 3n+1 is 1, or the first element.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>The <code>figcaption</code> is on top of the image. Perhaps <code>position: absolute</code> is a useful tool for this.</li>
+<li>The <code>figcaption</code> is also transparent. You can do that with <code>rgba</code> colors. If you&#39;ve never seen this before, you should <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgba(">look it up on MDN</a>).<ul>
+<li>You may be sensing a pattern here. When in doubt, use MDN.</li>
+</ul>
+</li>
+</ul>
+<p>The images are from <a href="https://placebear.com">placebear.com</a>. It&#39;s exactly what it sounds like it is.
+There&#39;s also <a href="https://placekitten.com">placekitten.com</a>, if you want to make &quot;I can haz placeholder art&quot; jokes.</p>
+<h3 id="for-bonus-points">For Bonus Points</h3>
+<p>Right now, if there were a 7th image, it would hang on the left.
+What if you wanted it centered?</p>
+<p>Perhaps, rather than floating, you could make a layout like this where the <code>li</code>&#39;s are 
+<code>inline-block</code>s, and set <code>text-align:center;</code> on the parent, so if there&#39;s 3 the fill the row, 
+but if there&#39;s 1 or 2 they&#39;re centered across the row.</p>
+<p>I bet that would work 😉</p>
+
+    </figcaption>
+</figure>
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll("pre code").forEach(function(el) {
+      hljs.highlightBlock(el);
+    });
+</script>
+</body>
+</html>

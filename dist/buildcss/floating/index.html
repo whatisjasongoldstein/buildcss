@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Shit in CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/buildcss/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Build Shit in CSS</h1>
+    <ol class="problems">
+        <li><a href="/buildcss/">Introduction</a></li>
+        <li><a href="/buildcss/display/">Blocks, Inlines, and Display</a></li>
+        <li><a href="/buildcss/selectors/">Selectors</a></li>
+        <li><a href="/buildcss/boxmodel/">Box Model</a></li>
+        <li><a href="/buildcss/floating/">Floating+Clearing I</a></li>
+        <li><a href="/buildcss/clearing-floats/">Floating+Clearing II</a></li>
+        <li><a href="/buildcss/centering/">Centering</a></li>
+        <li><a href="/buildcss/positioning/">Positioning</a></li>
+        <li><a href="/buildcss/vertical-centering/">Vertical Centering and Radius</a></li>
+        <li><a href="/buildcss/zindex/">Z-Index</a></li>
+        <li><a href="/buildcss/pseudoelements/">:before and :after</a></li>
+        <li><a href="/buildcss/columns/">Columns</a></li>
+        <li><a href="/buildcss/grids/">Image Grids</a></li>
+        <li><a href="/buildcss/no-bootstrap/">Say No To Bootstrap</a></li>
+        <li><a href="/buildcss/baseline/">The Baseline</a></li>
+        <li><a href="/buildcss/forms/">Forms</a></li>
+        <li><a href="/buildcss/tables/">Tables</a></li>
+        <li><a href="/buildcss/background-image/">Background Image</a></li>
+        <li><a href="/buildcss/transform/">More Transforms</a></li>
+        <li><a href="/buildcss/other/">Other Resources I like</a></li>
+    </ol>
+
+    <footer>Created by <a href="http://whatisjasongoldstein.com">Jason Goldstein</a>. Help improve this! Bring your ideas to <a href="https://github.com/whatisjasongoldstein/buildcss/issues">Github</a>.</footer>
+</div>
+
+
+  
+<figure class="problem" id="problem">
+    <div class="iframe-wrapper">
+        <a href="/buildcss/examples/floating.html" target="_blank"></a>
+        <iframe src="/buildcss/examples/floating.html"></iframe>
+    </div>
+    <figcaption>
+        <h1 id="floating-and-clearing">Floating and clearing</h1>
+<p>This isn&#39;t a Tetris board. Well, maybe it is. But it&#39;s also a demo
+of how floats and clears behave.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow">text-shadow</a> to help the numbers stand out against their backgrounds.</li>
+<li>Try making the <code>line-height</code> of the boxes the same as their height. You know how <code>line-heights</code> affect text in paragraphs, but its useful to think of them in relationship to other elements.</li>
+<li>The order of the boxes in important. If two boxes float right, the first one will be further right.</li>
+</ul>
+
+    </figcaption>
+</figure>
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll("pre code").forEach(function(el) {
+      hljs.highlightBlock(el);
+    });
+</script>
+</body>
+</html>

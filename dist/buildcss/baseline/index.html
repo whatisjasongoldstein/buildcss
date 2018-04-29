@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Shit in CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/buildcss/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Build Shit in CSS</h1>
+    <ol class="problems">
+        <li><a href="/buildcss/">Introduction</a></li>
+        <li><a href="/buildcss/display/">Blocks, Inlines, and Display</a></li>
+        <li><a href="/buildcss/selectors/">Selectors</a></li>
+        <li><a href="/buildcss/boxmodel/">Box Model</a></li>
+        <li><a href="/buildcss/floating/">Floating+Clearing I</a></li>
+        <li><a href="/buildcss/clearing-floats/">Floating+Clearing II</a></li>
+        <li><a href="/buildcss/centering/">Centering</a></li>
+        <li><a href="/buildcss/positioning/">Positioning</a></li>
+        <li><a href="/buildcss/vertical-centering/">Vertical Centering and Radius</a></li>
+        <li><a href="/buildcss/zindex/">Z-Index</a></li>
+        <li><a href="/buildcss/pseudoelements/">:before and :after</a></li>
+        <li><a href="/buildcss/columns/">Columns</a></li>
+        <li><a href="/buildcss/grids/">Image Grids</a></li>
+        <li><a href="/buildcss/no-bootstrap/">Say No To Bootstrap</a></li>
+        <li><a href="/buildcss/baseline/">The Baseline</a></li>
+        <li><a href="/buildcss/forms/">Forms</a></li>
+        <li><a href="/buildcss/tables/">Tables</a></li>
+        <li><a href="/buildcss/background-image/">Background Image</a></li>
+        <li><a href="/buildcss/transform/">More Transforms</a></li>
+        <li><a href="/buildcss/other/">Other Resources I like</a></li>
+    </ol>
+
+    <footer>Created by <a href="http://whatisjasongoldstein.com">Jason Goldstein</a>. Help improve this! Bring your ideas to <a href="https://github.com/whatisjasongoldstein/buildcss/issues">Github</a>.</footer>
+</div>
+
+
+  
+<figure class="problem" id="problem">
+    <div class="iframe-wrapper">
+        <a href="/buildcss/examples/baseline.html" target="_blank"></a>
+        <iframe src="/buildcss/examples/baseline.html"></iframe>
+    </div>
+    <figcaption>
+        <h1 id="the-baseline-vertical-align-line-height-etc-">The Baseline (Vertical Align, Line Height, etc.)</h1>
+<p>In typography, the baseline is a line the letter sit on. If you&#39;ve never heard this term,
+read the <a href="https://en.wikipedia.org/wiki/Baseline_\(typography\">Wikipedia entry</a>)
+quickly.</p>
+<p><code>line-height</code> describes the amount of space between the baselines.</p>
+<p>As you probably guessed, the boxes are <code>inline-block</code>s. Inline elements sit on the baseline, but you can adjust how they set using the <code>vertical-align</code> property. If you were to look this up on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align">MDN</a>, you&#39;ll have the default is baseline, but you can make it hang in the middle or the top accordingly.</p>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>Always set <code>line-height</code> to a number without units, this way it becomes a multiple
+of whatever the font-size is. This way, <code>line-height: 2;</code> is like double spacing,
+and if the font-size changes, your typography holds together.</li>
+<li>Since <code>vertical-align</code> describes the relationship between things to the baseline, its
+effect will be more pronounced when the baselines are further apart (bigger <code>line-height</code>).</li>
+</ul>
+
+    </figcaption>
+</figure>
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll("pre code").forEach(function(el) {
+      hljs.highlightBlock(el);
+    });
+</script>
+</body>
+</html>

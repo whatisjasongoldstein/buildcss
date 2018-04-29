@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Shit in CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/buildcss/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Build Shit in CSS</h1>
+    <ol class="problems">
+        <li><a href="/buildcss/">Introduction</a></li>
+        <li><a href="/buildcss/display/">Blocks, Inlines, and Display</a></li>
+        <li><a href="/buildcss/selectors/">Selectors</a></li>
+        <li><a href="/buildcss/boxmodel/">Box Model</a></li>
+        <li><a href="/buildcss/floating/">Floating+Clearing I</a></li>
+        <li><a href="/buildcss/clearing-floats/">Floating+Clearing II</a></li>
+        <li><a href="/buildcss/centering/">Centering</a></li>
+        <li><a href="/buildcss/positioning/">Positioning</a></li>
+        <li><a href="/buildcss/vertical-centering/">Vertical Centering and Radius</a></li>
+        <li><a href="/buildcss/zindex/">Z-Index</a></li>
+        <li><a href="/buildcss/pseudoelements/">:before and :after</a></li>
+        <li><a href="/buildcss/columns/">Columns</a></li>
+        <li><a href="/buildcss/grids/">Image Grids</a></li>
+        <li><a href="/buildcss/no-bootstrap/">Say No To Bootstrap</a></li>
+        <li><a href="/buildcss/baseline/">The Baseline</a></li>
+        <li><a href="/buildcss/forms/">Forms</a></li>
+        <li><a href="/buildcss/tables/">Tables</a></li>
+        <li><a href="/buildcss/background-image/">Background Image</a></li>
+        <li><a href="/buildcss/transform/">More Transforms</a></li>
+        <li><a href="/buildcss/other/">Other Resources I like</a></li>
+    </ol>
+
+    <footer>Created by <a href="http://whatisjasongoldstein.com">Jason Goldstein</a>. Help improve this! Bring your ideas to <a href="https://github.com/whatisjasongoldstein/buildcss/issues">Github</a>.</footer>
+</div>
+
+
+  
+<figure class="problem" id="problem">
+    <div class="iframe-wrapper">
+        <a href="/buildcss/examples/vertical-centering.html" target="_blank"></a>
+        <iframe src="/buildcss/examples/vertical-centering.html"></iframe>
+    </div>
+    <figcaption>
+        <h1 id="vertically-centering-things">Vertically Centering Things</h1>
+<h2 id="the-second-hardest-css-problem">The Second Hardest CSS Problem</h2>
+<p><code>margin:0 auto</code> will center a block horizontally, because auto means equal space on each side.
+But <code>margin: auto auto</code> has no extra effect, because the automatic top/bottom margin is 0.</p>
+<p>Why? Is the W3C on drugs? Well, maybe. The bigger issue is CSS was originally designed
+for relatively simple documents, and we keep pushing its limits.</p>
+<p>There are a few curve-balls here:</p>
+<h2 id="vertical-centering-notes">Vertical Centering Notes</h2>
+<ul>
+<li>Once upon a time, this was pretty much impossible. However, the new property <code>transform</code> gives us a way
+to hack around it.</li>
+<li>We could use <code>position: absolute; left: 50%</code> to move the left edge on an object halfway across its container. However, this means its left edge is aligned to the center, and we need the center aligned to the center.<ul>
+<li>You could compensate for this if you knew the exact width. But in a fluid crazy responsive world,
+that&#39;s not a very realistic requirement.</li>
+</ul>
+</li>
+<li><code>transform</code> (read about it on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">MDN</a>) moves things around relative to themselves, no their container. so <code>transform: translateX(50%)</code> will slide an element over by half its width.</li>
+<li>And that&#39;s our fix. <code>position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)</code> will:<ol>
+<li>Align the top and left edges to the center of the container</li>
+<li>Slide the element up and to the right by half its width and height respectively, so the centers
+are aligned for each axis.</li>
+</ol>
+</li>
+</ul>
+<h2 id="other-notes-">Other Notes:</h2>
+<ol>
+<li><code>border-radius</code> might be helpful for making things circles.</li>
+<li>Note that the letter are spaced out (<code>letter-spacing</code>) and the font is all-caps.<ul>
+<li>Never type words in all caps for aesthetics reasons - always used <code>text-transform</code>.</li>
+<li>What is <code>text-transform</code>, you ask? As usual, you should check on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform">MDN</a>.</li>
+</ul>
+</li>
+</ol>
+
+    </figcaption>
+</figure>
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll("pre code").forEach(function(el) {
+      hljs.highlightBlock(el);
+    });
+</script>
+</body>
+</html>

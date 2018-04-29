@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Shit in CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/buildcss/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Build Shit in CSS</h1>
+    <ol class="problems">
+        <li><a href="/buildcss/">Introduction</a></li>
+        <li><a href="/buildcss/display/">Blocks, Inlines, and Display</a></li>
+        <li><a href="/buildcss/selectors/">Selectors</a></li>
+        <li><a href="/buildcss/boxmodel/">Box Model</a></li>
+        <li><a href="/buildcss/floating/">Floating+Clearing I</a></li>
+        <li><a href="/buildcss/clearing-floats/">Floating+Clearing II</a></li>
+        <li><a href="/buildcss/centering/">Centering</a></li>
+        <li><a href="/buildcss/positioning/">Positioning</a></li>
+        <li><a href="/buildcss/vertical-centering/">Vertical Centering and Radius</a></li>
+        <li><a href="/buildcss/zindex/">Z-Index</a></li>
+        <li><a href="/buildcss/pseudoelements/">:before and :after</a></li>
+        <li><a href="/buildcss/columns/">Columns</a></li>
+        <li><a href="/buildcss/grids/">Image Grids</a></li>
+        <li><a href="/buildcss/no-bootstrap/">Say No To Bootstrap</a></li>
+        <li><a href="/buildcss/baseline/">The Baseline</a></li>
+        <li><a href="/buildcss/forms/">Forms</a></li>
+        <li><a href="/buildcss/tables/">Tables</a></li>
+        <li><a href="/buildcss/background-image/">Background Image</a></li>
+        <li><a href="/buildcss/transform/">More Transforms</a></li>
+        <li><a href="/buildcss/other/">Other Resources I like</a></li>
+    </ol>
+
+    <footer>Created by <a href="http://whatisjasongoldstein.com">Jason Goldstein</a>. Help improve this! Bring your ideas to <a href="https://github.com/whatisjasongoldstein/buildcss/issues">Github</a>.</footer>
+</div>
+
+
+  
+<figure class="problem" id="problem">
+    <div class="iframe-wrapper">
+        <a href="/buildcss/examples/clearing-floats.html" target="_blank"></a>
+        <iframe src="/buildcss/examples/clearing-floats.html"></iframe>
+    </div>
+    <figcaption>
+        <h1 id="clearing-floats">Clearing Floats</h1>
+<p>Often you&#39;ll want things that are side by side on opposite ends of a container.</p>
+<p>By default, floating elements overhang their container, as you can see in the top example.</p>
+<p>There are two ways to fix this:</p>
+<ol>
+<li>Set <code>overflow:hidden;</code> on the container. This clips anything that runs over, but it also
+causes the container to extend to fit the floats.</li>
+<li>Set an <code>:after</code> psuedoelement on the container and have it <code>clear: both</code>.<ul>
+<li>This is useful if you want to be able to hang outside the container in another way.
+In the third example, the boxes stick out the top. </li>
+<li>In all the examples, there&#39;s a <code>box-shadow</code> that would be clipped by <code>overflow: hidden;</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Use <code>&lt;hr&gt;</code> for the lines between examples.</li>
+<li><code>myelement:after</code> clears a psuedoelemnt. You need to set it&#39;s <code>content</code> and <code>display</code> to make it useful. 
+<code>content</code> is probably blank in this case.<ul>
+<li>We&#39;ll cover more on psuedo-elements later.</li>
+</ul>
+</li>
+</ul>
+
+    </figcaption>
+</figure>
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll("pre code").forEach(function(el) {
+      hljs.highlightBlock(el);
+    });
+</script>
+</body>
+</html>

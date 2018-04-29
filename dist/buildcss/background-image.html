@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Image</title>
+</head>
+<style type="text/css">
+    body {
+        margin: 0;
+    }
+
+    .box {
+        width: 175px;
+        height: 125px;
+        border: 1px solid black;
+        background-image: url("../img/husky.jpg");
+        float: left;
+        margin: 10px;
+        background-color: orange;
+    }
+
+    .cover {
+        background-size: cover;
+        background-position: top center;
+    }
+
+    .contain {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .centered {
+        background-size: 50%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .cover-center {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .stripe {
+        background-size: 25%;
+        background-repeat: repeat-x;
+        background-position: 0 10px;
+    }
+
+    .eyes {
+        background-position: 50% 60%;
+        background-size: 250%;
+    }
+</style>
+
+<body>
+
+<div class="box cover"></div>
+<div class="box contain"></div>
+<div class="box centered"></div>
+
+<div class="box cover-center"></div>
+<div class="box stripe"></div>
+<div class="box eyes"></div>
+
+</body>
+</html>
