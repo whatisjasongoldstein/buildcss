@@ -1,3 +1,7 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
 # Bear Awareness (in Grid Form)
 
 A common way to lay out a list of visual things is a grid like above.
@@ -94,3 +98,8 @@ but if there's 1 or 2 they're centered across the row.
 
 I bet that would work 😉
 
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/grids.html", text) }}
+{% endblock content %}

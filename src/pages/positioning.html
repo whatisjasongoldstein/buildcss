@@ -1,3 +1,7 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
 # Positions
 
 ## Goals:
@@ -21,3 +25,8 @@ has a postiion set.
 * `position: relative` moves things around from their default position. This means
     `position:relative; left: 10px;` would slide an element to the left by 10 pixels.
 * `position:fixed` makes something sticky, and it will stay put as you scroll.
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/positioning.html", text) }}
+{% endblock content %}

@@ -1,3 +1,7 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
 # Columns
 
 Columns are tricky. Try to build this.
@@ -29,4 +33,8 @@ The very thought of this should fill you with disgust, that such ugliness should
 ### Aside
 
 `columns: 2;` is a thing in CSS3, however, it still doesn't feel ready for prime time. [Read more on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/columns).
+{% endset %}
 
+{% block content %}
+  {{ framed("/buildcss/examples/columns.html", text) }}
+{% endblock content %}

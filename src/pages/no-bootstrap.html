@@ -1,3 +1,8 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
+
 # Say No to Bootstrap (Sometimes)
 
 Above, you see several CSS components from [Bootstrap](http://getbootstrap.com/), the popular (and highly opinionated)
@@ -33,3 +38,8 @@ Their responsive stuff, however, is a tragic mess.
 
 But you're a professional developer. You shouldn't listen to me. You've got an Inspect Element
 and a Github, you can read the code of any front-end library and evaluate it for your purposes.
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/no-bootstrap.html", text) }}
+{% endblock content %}

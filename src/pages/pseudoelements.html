@@ -1,3 +1,7 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
 # Pseudoelements
 
 Pseudoelements are things you add before or after an element that can be styled,
@@ -20,3 +24,8 @@ For this example, use this HTML. Obviously, you can't just add a * and an "x" to
 
 Sometimes pseudoelements take some finessing to lay them out correctly relative to the rest of the content.
 `position`, `margin`, `line-height` and `vertical-align` are usually good things to try fiddling with.
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/pseudoelements.html", text) }}
+{% endblock content %}

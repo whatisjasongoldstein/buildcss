@@ -1,3 +1,8 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
+
 # Transforms
 
 Transforms are a useful new property in CSS for rotating and warping.
@@ -15,3 +20,8 @@ This is your markup: `<h1>Classified</h1>`
 and height fo the window.
 * Rotating the element screws up the calculations for subsequent transforms. Do the `translate` step fo the `rotate()` first.
 * Only IE10 and up support `transform`. When using cutting edge CSS tools, always consider them progress enhancements. Make sure the design works to your satisfaction without them.
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/transform.html", text) }}
+{% endblock content %}

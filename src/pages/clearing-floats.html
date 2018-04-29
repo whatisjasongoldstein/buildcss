@@ -1,3 +1,8 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
+
 # Clearing Floats
 
 Often you'll want things that are side by side on opposite ends of a container.
@@ -20,3 +25,8 @@ causes the container to extend to fit the floats.
 * `myelement:after` clears a psuedoelemnt. You need to set it's `content` and `display` to make it useful. 
 `content` is probably blank in this case.
     * We'll cover more on psuedo-elements later.
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/clearing-floats.html", text) }}
+{% endblock content %}

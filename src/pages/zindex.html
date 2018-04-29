@@ -1,3 +1,7 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
 # Z-Index
 
 `z-index` is how you control the order of overlapping layers.
@@ -19,3 +23,8 @@ because we need to set a position to get the squares to overlap anyway.
 * It's a good idea to leave some space between layers so if you need to place things between them in the future, you don't need to alter all the values. 
     * `z-index:1;` and `z-index:2`; is a bad idea. 
     * `z-index:10;` and `index:20;` is better.
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/zindex.html", text) }}
+{% endblock content %}

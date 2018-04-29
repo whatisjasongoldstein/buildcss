@@ -1,3 +1,7 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
 # Background Image
 
 Take a look at the MDN page for [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image), and use this picture of a Husky: [`http://whatisjasongoldstein.github.io/buildcss/img/husky.jpg`](http://whatisjasongoldstein.github.io/buildcss/img/husky.jpg).
@@ -19,3 +23,8 @@ Going left to right, do this:
 <small>
 **Special Thanks:** The giant fluffy creature shown above is Koda. Because we live in a ridiculous world, you can see more pictures of her on [Instagram](https://www.instagram.com/thatkoda/).
 </small>
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/background-image.html", text) }}
+{% endblock content %}

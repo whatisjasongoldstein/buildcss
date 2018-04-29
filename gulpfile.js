@@ -43,15 +43,23 @@ gulp.task('html', () => {
 // Copy html test pages.
 //
 gulp.task('files', () => {
-  gulp.src('src/**/*.{js,css}')
+  gulp.src('src/**/*.{js,css,jpg}')
     .pipe(gulp.dest(dist));
+});
+
+//
+// Copy html test pages.
+//
+gulp.task('examples', () => {
+  gulp.src('src/examples/*.*')
+    .pipe(gulp.dest(`${ dist }/examples`));
 });
 
 
 //
 // Dev server
 //
-gulp.task('serve', ['files', 'html'], () => {
+gulp.task('serve', ['files', 'examples', 'html'], () => {
   browserSync.init({
     notify: true,
     port: 9000,
@@ -64,7 +72,7 @@ gulp.task('serve', ['files', 'html'], () => {
   });
 
   gulp.watch('src/**/*.*', ['files', reload]);
-  gulp.watch('src/**/*.html', ['html', reload]);
+  gulp.watch('src/**/*.html', ['html', 'examples', reload]);
   gulp.watch('src/**/*.scss', ['css', reload]);
 });
 

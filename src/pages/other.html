@@ -1,3 +1,7 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
 # I'm done here, but you're just getting started
 
 The best way to learn how to build shit in CSS 
@@ -17,3 +21,8 @@ But if you're looking for more resources, here's some good stuff:
 
 Did I miss a topic? Is there a resource I should add to the list above? Open an Issue
 on [Github](https://github.com/whatisjasongoldstein/buildcss/issues).
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/other.html", text) }}
+{% endblock content %}

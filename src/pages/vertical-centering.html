@@ -1,3 +1,7 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
 # Vertically Centering Things
 ## The Second Hardest CSS Problem
 
@@ -27,3 +31,8 @@ to hack around it.
 2. Note that the letter are spaced out (`letter-spacing`) and the font is all-caps.
     * Never type words in all caps for aesthetics reasons - always used `text-transform`.
     * What is `text-transform`, you ask? As usual, you should check on [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform).
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/vertical-centering.html", text) }}
+{% endblock content %}

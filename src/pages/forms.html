@@ -1,3 +1,7 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
 # Forms
 
 Styling forms is tricky but important. In a large project,
@@ -41,3 +45,9 @@ This form markup is similar to what a web framework - say, Django - would genera
 * Use `:before` to make the astericks on required fields.
 * Remember vertical-align when you can't figure out how to make textarea hang down.
 * Setting the width on `label` is a good way to make everything line up.
+
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/forms.html", text) }}
+{% endblock content %}

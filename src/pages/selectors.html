@@ -1,3 +1,7 @@
+{% extends "pages/base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
 # Advanced Selectors
 
 I assume you already know how to style stuff by its `id`, `class`, or `element`.
@@ -13,3 +17,8 @@ I assume you already know how to style stuff by its `id`, `class`, or `element`.
 
 * `.a + .b` is an adjacent selector. It matches elements with a class `b` that are right after elements with a class `.a`.
 * `nth-child` is pretty cool. You should [read about it](https://developer.mozilla.org/en-US/docs/Web/CSS/%3Anth-child).
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/selectors.html", text) }}
+{% endblock content %}
