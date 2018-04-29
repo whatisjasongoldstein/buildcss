@@ -8,7 +8,7 @@ const nunjucks = require('nunjucks');
 const reload = browserSync.reload;
 const rename = require("gulp-rename");
 
-const dist = 'dist/buildcss';
+const dist = 'docs/buildcss';
 const marked = require('marked');
 
 
@@ -67,7 +67,7 @@ gulp.task('serve', ['build'], () => {
     reloadOnRestart: true,
     startPath: '/buildcss/',
     server: {
-      baseDir: ['dist']
+      baseDir: ['docs']
     }
   });
 
