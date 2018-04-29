@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+{% from "macros/framed-problem.html" import framed %}
+
+{% set text %}
 # An intro to building shit
 
 This is not a tutorial; it's a series of examples.
@@ -27,3 +31,8 @@ Each problem is an example of something made with html in CSS. Your job is to re
 
 **Need a place to write code?** You should get used to working with plain html files on your desktop.
 But you can also work in [CodePen](https://codepen.io) or [JSFiddle](https://jsfiddle.net/).
+{% endset %}
+
+{% block content %}
+  {{ framed("/buildcss/examples/intro.html", text) }}
+{% endblock content %}
